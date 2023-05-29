@@ -1,9 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrains Mono NL Nerd Font";
-    font-weight: regular;
-    font-size: 15px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
     min-height: 0;
 }
 
@@ -15,7 +14,7 @@ window#waybar {
 tooltip {
     background: #1e1e2e;
     border-radius: 10px;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     border-color: #11111b;
 }
