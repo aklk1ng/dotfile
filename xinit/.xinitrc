@@ -30,4 +30,3 @@ xrdb -merge ~/.Xresources
 dunst -conf ~/scripts/config/dunst.conf &
 
 exec dwm
-# exec Hyprland
