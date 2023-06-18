@@ -149,6 +149,8 @@ xml.inherit = "text_default"
 yaml.inherit = "text_default"
 yml.inherit = "text_default"
 fish.inherit = "text_default"
+zig.inherit = "text_default"
+zsh.inherit = "text_default"
 
 # archive formats
 7z.app_list = [
