@@ -204,15 +204,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 exec_always --no-startup-id xrandr --dpi 192
 exec_always --no-startup-id $HOME/scripts/bluetooth.sh &
 exec_always --no-startup-id mpd /home/cjh/.config/mpd/mpd.conf &
-# exec_always --no-startup-id feh --bg-scale $HOME/wallpaper/oWV6RnN85Y32vc7.jpg
-# exec_always --no-startup-id feh --bg-scale $HOME/wallpaper/ic8ubjf.png
 exec_always --no-startup-id feh --bg-scale $HOME/wallpaper/ic8ubjf.png &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
-# exec_always --no-startup-id $HOME/scripts/clash.sh
 exec_always --no-startup-id picom --experimental-backends --config ~/scripts/config/picom.conf &
 exec_always --no-startup-id fcitx5 &
 # exec_always --no-startup-id export GDK_SCALE=2
-# exec_always --no-startup-id utools &
 
 #设置窗口之间的间距
 gaps inner 6
