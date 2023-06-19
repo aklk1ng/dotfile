@@ -29,6 +29,12 @@ alias crb "cargo run --bin"
 alias ct "cargo test"
 alias ci "cargo install"
 
+alias zr "zig run"
+alias zt "zig test"
+alias zb "zig build"
+alias zl "zig init-lib"
+alias ze "zig init-exe"
+
 alias di "docker images"
 alias dp "docker pull"
 alias dP "docker push"
