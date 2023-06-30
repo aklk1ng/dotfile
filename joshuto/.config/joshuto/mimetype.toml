@@ -154,6 +154,7 @@ zsh.inherit = "text_default"
 nix.inherit = "text_default"
 ps1.inherit = "text_default"
 lock.inherit = "text_default"
+ts.inherit = "text_default"
 
 # archive formats
 7z.app_list = [
