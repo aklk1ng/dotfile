@@ -29,4 +29,9 @@ fi
 xrdb -merge ~/.Xresources
 dunst -conf ~/scripts/config/dunst.conf &
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+
 exec dwm
