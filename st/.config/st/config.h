@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=26:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:pixelsize=27:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*
@@ -117,35 +117,35 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-  [0] = "#000000", /* black   */
-  [1] = "#ff5555", /* red     */
-  [2] = "#50fa7b", /* green   */
-  [3] = "#f1fa8c", /* yellow  */
-  [4] = "#bd93f9", /* blue    */
-  [5] = "#ff79c6", /* magenta */
-  [6] = "#8be9fd", /* cyan    */
-  [7] = "#bbbbbb", /* white   */
+  [0] = "#1e222a", /* black   */
+  [1] = "#Ff5C57", /* red     */
+  [2] = "#5AF78E", /* green   */
+  [3] = "#F3F99D", /* yellow  */
+  [4] = "#57C7FF", /* blue    */
+  [5] = "#FF6AC1", /* magenta */
+  [6] = "#9AEDFE", /* cyan    */
+  [7] = "#EFF0EB", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#696969", /* black   */
-  [9]  = "#ff5555", /* red     */
-  [10] = "#50fa7b", /* green   */
-  [11] = "#f1fa8c", /* yellow  */
-  [12] = "#bd93f9", /* blue    */
-  [13] = "#ff79c6", /* magenta */
-  [14] = "#8be9fd", /* cyan    */
-  [15] = "#dddddd", /* white   */
+  [8] = "#686868",  /* black   */
+  [9] = "#FF5C57",  /* red     */
+  [10] = "#5AF78E", /* green   */
+  [11] = "#F3F99D", /* yellow  */
+  [12] = "#57C7FF", /* blue    */
+  [13] = "#FF6AC1", /* magenta */
+  [14] = "#9AEDFE", /* cyan    */
+  [15] = "#EFF0EB", /* white   */
 
   /* special colors */
-  [256] = "#222D31", /* background */
-  [257] = "#B5B5B5", /* foreground */
+  [256] = "#1e222a", /* background */
+  [257] = "#e16c96", /* foreground */
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
+unsigned int defaultfg = 7;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
