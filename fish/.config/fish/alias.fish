@@ -19,6 +19,8 @@ alias zimconfig "nvim ~/.zimrc"
 alias readme "nvim README.md"
 alias lg "lazygit"
 
+alias H "Hyprland"
+
 alias j "joshuto"
 alias reload "source ~/.config/fish/config.fish"
 

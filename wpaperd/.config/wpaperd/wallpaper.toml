@@ -1,0 +1,4 @@
+[default]
+path = "~/wallpaper/"
+duration = "5m"
+sorting = "random"
