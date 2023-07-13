@@ -1,9 +1,9 @@
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 10px;
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
-  font-size: 22px;
+  font-size: 23px;
   min-height: 0;
 }
 
@@ -13,21 +13,22 @@ window#waybar {
 }
 
 tooltip {
-  background: #1e1e2e;
+  background: #3e4556;
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
-  border-color: #11111b;
+  border-color: #eba0ac;
 }
 
 #workspaces button {
   padding: 5px;
-  color: #313244;
+  /* color: #313244; */
+  color: #a6adc8;
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  color: #a6adc8;
+  color: #eba0ac;
 }
 
 #workspaces button.focused {
@@ -73,36 +74,37 @@ tooltip {
 
 #cpu {
   color: #89b4fa;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 10px;
 }
 #memory {
   color: #89b4fa;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #disk {
   color: #fab387;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
   margin-left: 10px;
   border-right: 0px;
 }
 
 #temperature {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #temperature.critical {
   color: #eba0ac;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #backlight {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #tray {
   border-radius: 10px;
+  margin-left: 10px;
   margin-right: 10px;
 }
 
@@ -150,25 +152,23 @@ tooltip {
   color: #89b4fa;
   border-left: 0px;
   border-right: 0px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 #pulseaudio.microphone {
   color: #cba6f7;
   border-left: 0px;
   border-right: 0px;
-  border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #battery {
   color: #a6e3a1;
-  border-radius: 0 10px 10px 0;
-  margin-right: 10px;
-  border-left: 0px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #custom-weather {
   border-radius: 0px 10px 10px 0px;
-  border-right: 0px;
+  border-right: 10px;
   margin-left: 0px;
 }
