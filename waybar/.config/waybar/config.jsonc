@@ -24,11 +24,10 @@
         "backlight",
         "battery",
         "clock",
-        "custom/weather",
         "tray",
     ],
     "clock": {
-      "format": "{: %I:%M %p   %a, %b %e}",
+      "format": "{: %H:%M   %a, %b %e}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "wlr/workspaces": {
@@ -156,12 +155,5 @@
             "activated": "",
             "deactivated": ""
         }
-    },
-   "custom/weather" : {
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
     },
 }
