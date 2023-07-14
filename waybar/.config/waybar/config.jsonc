@@ -27,8 +27,9 @@
         "tray",
     ],
     "clock": {
-      "format": "{: %H:%M   %a, %b %e}",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format": "{:%H:%M %A %b %d}",
+      "interval": 1
     },
     "wlr/workspaces": {
         "all-outputs": true,
@@ -71,15 +72,15 @@
     "disk": {
         "format": " {percentage_used}% ({free})",
         "tooltip": true,
-        "interval": 2
+        "interval": 10
     },
+
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true,
         "max-length": 35
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{essid} - {ifname} via {gwaddr}",
