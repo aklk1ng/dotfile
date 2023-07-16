@@ -7,29 +7,33 @@
     "margin-left": 10,
     "margin-right": 10,
     "modules-left": [
-        "wlr/workspaces",
-        "cpu",
-        "memory",
-        "temperature",
-        "disk",
+      "custom/icon",
+      "wlr/workspaces",
+      "cpu",
+      "memory",
+      "temperature",
+      "disk",
     ],
     "modules-center": [
       "hyprland/window"
     ],
     "modules-right": [
-        "network",
-        "bluetooth",
-        "pulseaudio",
-        "pulseaudio#microphone",
-        "backlight",
-        "battery",
-        "clock",
-        "tray",
+      "network",
+      "bluetooth",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "backlight",
+      "battery",
+      "clock",
+      "tray",
     ],
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format": "{:%H:%M %A %b %d}",
       "interval": 1
+    },
+    "custom/icon": {
+      "format": "󰣇"
     },
     "wlr/workspaces": {
         "all-outputs": true,

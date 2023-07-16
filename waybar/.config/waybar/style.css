@@ -49,6 +49,7 @@ tooltip {
   border-radius: 10px;
 }
 
+#custom-icon,
 #window,
 #clock,
 #cpu,
@@ -68,6 +69,11 @@ tooltip {
   margin: 3px 0px;
   margin-top: 10px;
   border: 1px solid #181825;
+}
+
+#custom-icon {
+  color: #00bfff;
+  border-radius: 10px 0px 0px 10px;
 }
 
 #cpu {
@@ -109,7 +115,6 @@ tooltip {
 #workspaces {
   background: #1e1e2e;
   border-radius: 10px;
-  margin-left: 10px;
   padding-right: 0px;
   padding-left: 5px;
 }
