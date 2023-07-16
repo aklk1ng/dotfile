@@ -21,14 +21,6 @@ if [ -n "$DISPLAY" ] && command -v ueberzug > /dev/null; then
         rm -rf "$joshuto_wrap_tmp"
     }
 
-    function show_image {
-        >"${joshuto_wrap_ueber_fifo}" declare -A -p cmd=( \
-                [action]=add [identifier]="${joshuto_wrap_ueber_identifier}" \
-                [x]="${2}" [y]="${3}" \
-                [width]="${4}" [height]="${5}" \
-                [path]="${1}")
-    }
-
     function remove_image {
         >"${joshuto_wrap_ueber_fifo}" declare -A -p cmd=( \
             [action]=remove [identifier]="${joshuto_wrap_ueber_identifier}")
