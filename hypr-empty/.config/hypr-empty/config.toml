@@ -1,0 +1,24 @@
+[[components]]
+workspace = "2"
+command = "kitty"
+args = ["-e", "bash", "$HOME/scripts/start-clash.sh"]
+
+[[components]]
+workspace = "9"
+command = "google-chrome-stable"
+args = []
+
+[[components]]
+workspace = "8"
+command = "kitty"
+args = ["ncmpcpp"]
+
+[[components]]
+workspace = "7"
+command = "code"
+args = []
+
+[[components]]
+workspace = "10"
+command = "linuxqq"
+args = []
