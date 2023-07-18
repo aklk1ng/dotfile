@@ -11,11 +11,11 @@ makepkg -si
 echo "ending..."
 
 echo "Install some packages"
-sudo pacman -S zsh fish mpd mpc ncmpcpp ranger rofi tmux wofi bat ripgrep make cmake fzf
+sudo pacman -S zsh fish mpd mpc ncmpcpp ranger rofi tmux bat ripgrep make cmake fzf
 yay -Syu
 
 yay -S --noconfirm hyprland kitty waybar swww cava \
-    swaybg swaylock-effects wofi wlogout mako \
+    swaybg swaylock-effects wlogout mako \
     noto-fonts-emoji \
     python-requests \
     swappy grim slurp pamixer brightnessctl gvfs \

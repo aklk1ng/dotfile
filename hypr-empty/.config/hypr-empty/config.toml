@@ -1,7 +1,7 @@
 [[components]]
 workspace = "2"
 command = "kitty"
-args = ["-e", "bash", "$HOME/scripts/start-clash.sh"]
+args = ["-e", "bash", "/home/cjh/scripts/start-clash.sh"]
 
 [[components]]
 workspace = "9"
