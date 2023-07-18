@@ -27,7 +27,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 xrdb -merge ~/.Xresources
-dunst -conf ~/scripts/config/dunst.conf &
+dunst &
 
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
