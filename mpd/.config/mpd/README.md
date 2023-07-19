@@ -11,5 +11,6 @@ sticker_file       "~/.config/mpd/sticker.sql"
 # Start:
 
 ```planet
+systemctl enable mpd.service --user
 systemctl start mpd.service --user
 ```
