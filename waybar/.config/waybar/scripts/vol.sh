@@ -1,11 +1,9 @@
 #! /bin/bash
 
 call_ncmpcpp() {
-    pid1=$(ps aux | grep 'st -t music' | grep -v grep | awk '{print $2}')
-    pid2=$(ps aux | grep 'st -t music_ncmpcpp' | grep -v grep | awk '{print $2}')
-    mx=$(xdotool getmouselocation --shell | grep X= | sed 's/X=//')
-    my=$(xdotool getmouselocation --shell | grep Y= | sed 's/Y=//')
-    kill $pid1 && kill $pid2 || st -t music_ncmpcpp -g 40x10+$((mx - 90))+$((my)) -c stfloating -A 0.7 -e ncmpcpp
+    pid1=$(ps aux | grep 'kitty -T music' | grep -v grep | awk '{print $2}')
+    pid2=$(ps aux | grep 'kitty -T music_ncmpcpp' | grep -v grep | awk '{print $2}')
+    kill $pid1 && kill $pid2 || kitty -T music_ncmpcpp --class floating -e ncmpcpp
 }
 
 case "$1" in
