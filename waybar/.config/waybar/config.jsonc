@@ -11,10 +11,7 @@
       "wlr/workspaces",
       "cpu",
       "memory",
-      "temperature",
       "disk",
-    ],
-    "modules-center": [
       "hyprland/window"
     ],
     "modules-right": [
@@ -58,18 +55,6 @@
     },
     "memory": {
         "format": " {}%",
-        "tooltip": true,
-        "interval": 2
-    },
-    "temperature": {
-        "critical-threshold": 40,
-        "format-critical": "{icon} {temperatureC}°C",
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ],
         "tooltip": true,
         "interval": 2
     },

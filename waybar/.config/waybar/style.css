@@ -57,19 +57,16 @@ tooltip {
 #disk,
 #battery,
 #pulseaudio,
-#pulseaudio.microphone
+#pulseaudio.microphone,
 #network,
 #bluetooth,
-#temperature,
 #workspaces,
 #tray,
 #backlight {
   background: #1e1e2e;
-  opacity: 0.8;
   padding: 0px 10px;
   margin: 3px 0px;
   margin-top: 10px;
-  border: 1px solid #181825;
 }
 
 #custom-icon {
@@ -84,7 +81,7 @@ tooltip {
 }
 #memory {
   color: #89b4fa;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 #disk {
@@ -92,15 +89,6 @@ tooltip {
   border-radius: 10px;
   margin-left: 10px;
   border-right: 0px;
-}
-
-#temperature {
-  border-radius: 0px 10px 10px 0px;
-}
-
-#temperature.critical {
-  color: #eba0ac;
-  border-radius: 0px 10px 10px 0px;
 }
 
 #backlight {
@@ -123,8 +111,8 @@ tooltip {
 
 #window {
   border-radius: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 10px;
+  margin-right: 0px;
 }
 
 #clock {
