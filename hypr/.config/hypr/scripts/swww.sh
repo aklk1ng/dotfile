@@ -5,9 +5,7 @@ swww init
 
 export SWWW_TRANSITION_STEP=2
 
-let i=5
 while true; do
-    [ $((i % 500)) -eq 0 ] && swww img $(find ~/wallpaper/bg/ -name "*.png" | shuf -n1)
-    sleep 10
-    let i+=5
+    sleep 300
+    swww img $(find ~/wallpaper/bg/ -name "*.png" | shuf -n1)
 done
