@@ -38,7 +38,7 @@ function get_linux_distro() {
 
 function install_plugin() {
     bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
-    brew install zsh-vi-mode
+    yay -S --noconfirm install zsh-vi-mode
 }
 
 # 安装mac平台必备软件
@@ -342,6 +342,6 @@ update)
     update
     ;;
 *)
-    echo "Please use main|update arguments"
+    echo "Please use install|update arguments"
     ;;
 esac
