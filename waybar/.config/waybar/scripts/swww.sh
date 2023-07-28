@@ -3,7 +3,7 @@
 swww kill
 swww init
 
-export SWWW_TRANSITION_STEP=2
+export SWWW_TRANSITION_STEP=1
 
 let i=5
 while true; do

@@ -15,7 +15,6 @@
       "hyprland/window"
     ],
     "modules-right": [
-      "network",
       "bluetooth",
       "pulseaudio",
       "pulseaudio#microphone",
@@ -30,7 +29,9 @@
       "interval": 1
     },
     "custom/icon": {
-      "format": "󰣇"
+      "format": "󰣇",
+      "on-click": "~/.config/waybar/scripts/bg.sh",
+      "tooltip": false
     },
     "wlr/workspaces": {
         "all-outputs": true,
@@ -67,14 +68,6 @@
     "hyprland/window": {
         "format": "{}",
         "max-length": 35
-    },
-    "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format": "{essid} - {ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
     },
     "bluetooth": {
       "format": " {status}",
