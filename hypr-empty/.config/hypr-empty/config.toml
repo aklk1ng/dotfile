@@ -4,21 +4,21 @@ command = "kitty"
 args = ["-e", "bash", "/home/cjh/scripts/start-clash.sh"]
 
 [[components]]
-workspace = "9"
+workspace = "13"
 command = "google-chrome-stable"
 args = []
 
 [[components]]
-workspace = "8"
+workspace = "12"
 command = "kitty"
 args = ["ncmpcpp"]
 
 [[components]]
-workspace = "7"
+workspace = "16"
 command = "code"
 args = []
 
 [[components]]
-workspace = "10"
+workspace = "14"
 command = "linuxqq"
 args = []

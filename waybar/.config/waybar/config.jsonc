@@ -34,20 +34,28 @@
       "tooltip": false
     },
     "wlr/workspaces": {
-        "all-outputs": true,
-        "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        }
+      "format":"{icon}",
+      "all-outputs": true,
+      "on-click": "activate",
+      "format-icons": {
+        "1":"󰎤",
+        "2":"󰎧",
+        "3":"󰎪",
+        "4":"󰎭",
+        "5":"󰎱",
+        "6":"󰎳",
+        "7":"󰎶",
+        "8":"󰎹",
+        "9":"󰎼",
+        "10":"󰽽",
+        "11":"󰬡",
+        "12":"󰎄",
+        "13":"",
+        "14":"󰘅",
+        "15":"󰘑",
+        "16":"󰨞",
+      },
+      "sort-by-number":true
     },
     "cpu": {
         "format": " {usage}%",
