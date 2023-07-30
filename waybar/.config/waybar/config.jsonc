@@ -137,7 +137,7 @@
         "interval": 5
     },
     "tray": {
-        "icon-size": 15,
+        "icon-size": 25,
         "spacing": 15
     },
 }
