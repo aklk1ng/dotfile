@@ -18,6 +18,8 @@ alias zimconfig "nvim ~/.zimrc"
 alias readme "nvim README.md"
 alias lg "lazygit"
 
+alias nc "nvim --clean"
+
 alias H "Hyprland"
 
 alias j "joshuto"
