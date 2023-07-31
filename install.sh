@@ -19,7 +19,7 @@ yay -Syu
 yay -S --noconfirm hyprland waybar swww cava \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    joshuto keyd fastfetch
+    joshuto keyd fastfetch clipman
 
 echo "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
