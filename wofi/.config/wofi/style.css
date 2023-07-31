@@ -1,8 +1,8 @@
-/* Macchiato Rosewater */
-@define-color accent #f4dbd6;
-@define-color txt #cad6f9;
-@define-color bg #24273a;
+/* Macchiato Sapphire */
+@define-color accent #7dc4e4;
+@define-color txt #cad3f5;
 @define-color bg2 #494d64;
+@define-color bg #24273a;
 
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
