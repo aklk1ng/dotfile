@@ -4,7 +4,7 @@ dotfile_dir=$HOME/dotfile
 
 cd $dotfile_dir
 sudo pacman -S unzip zsh lxappearance xfce4-settings grim python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp dunst network-manager-applet copyq kitty lazygit
+    ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp dunst network-manager-applet copyq kitty lazygit wl-clipboard
 echo "Install yay"
 stow profile
 cd $HOME
