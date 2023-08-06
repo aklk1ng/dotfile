@@ -12,6 +12,10 @@ window#waybar {
   color: #cdd6f4;
 }
 
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
 tooltip {
   background: #3e4556;
   border-radius: 10px;
@@ -27,15 +31,8 @@ tooltip {
   color: #eba0ac;
 }
 
-#workspaces button.urgent {
-  color: #11111b;
-  background: #a6e3a1;
-  border-radius: 10px;
-}
-
 #workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
+  background: #37474f;
   border-radius: 10px;
 }
 
@@ -52,7 +49,6 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-  background: #1e1e2e;
   padding: 0px 10px;
   margin-top: 10px;
 }
@@ -95,7 +91,9 @@ tooltip {
 }
 
 #workspaces {
-  background: #1e1e2e;
+  /* background: #1e1e2e; */
+  background: #37474f;
+
   border-radius: 10px;
   border-radius: 0px 10px 10px 0px;
   padding-right: 0px;
