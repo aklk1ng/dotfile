@@ -9,7 +9,7 @@
 
 window#waybar {
   background: rgba(21, 18, 27, 0);
-  color: #cdd6f4;
+  color: #cdefff;
 }
 
 window#waybar.hidden {
@@ -25,6 +25,7 @@ tooltip {
   padding: 5px;
   color: #a6adc8;
   margin-right: 5px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #workspaces button.active {
@@ -46,25 +47,24 @@ tooltip {
 #custom-cava,
 #pulseaudio,
 #bluetooth,
-#workspaces,
 #tray,
 #backlight {
   padding: 0px 10px;
-  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
 }
 
 #custom-icon {
   color: #00bfff;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #cpu {
-  color: #89b4fa;
+  color: #89b4ff;
   border-radius: 10px 0px 0px 10px;
   margin-left: 10px;
 }
 #memory {
-  color: #89b4fa;
+  color: #89b4ff;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -85,48 +85,36 @@ tooltip {
 }
 
 #tray {
-  border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-#workspaces {
-  /* background: #1e1e2e; */
-  background: #37474f;
-
-  border-radius: 10px;
-  border-radius: 0px 10px 10px 0px;
-  padding-right: 0px;
-  padding-left: 5px;
-}
-
 #window {
-  border-radius: 10px;
   margin-left: 10px;
   margin-right: 0px;
 }
 
 #clock {
-  color: #fab387;
+  color: #fab39f;
   border-radius: 10px 10px 10px 10px;
   margin-left: 10px;
   border-right: 0px;
 }
 
 #bluetooth {
-  color: #89b4fa;
+  color: #89b4ff;
   border-radius: 10px 0px 0px 10px;
   margin-right: 0px;
 }
 
 #pulseaudio {
-  color: #89b4fa;
+  color: #89b4ff;
   border-left: 0px;
   border-right: 0px;
   border-radius: 0px 0px 0px 0px;
 }
 
 #battery {
-  color: #a6e3a1;
+  color: #a6e7af;
   border-radius: 0px 10px 10px 0px;
 }
