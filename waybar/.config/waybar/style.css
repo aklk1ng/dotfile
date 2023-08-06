@@ -15,26 +15,16 @@ window#waybar {
 tooltip {
   background: #3e4556;
   border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #eba0ac;
 }
 
 #workspaces button {
   padding: 5px;
-  /* color: #313244; */
   color: #a6adc8;
   margin-right: 5px;
 }
 
 #workspaces button.active {
   color: #eba0ac;
-}
-
-#workspaces button.focused {
-  color: #a6adc8;
-  background: #eba0ac;
-  border-radius: 10px;
 }
 
 #workspaces button.urgent {
@@ -56,8 +46,8 @@ tooltip {
 #memory,
 #disk,
 #battery,
+#custom-cava,
 #pulseaudio,
-#pulseaudio.microphone,
 #bluetooth,
 #workspaces,
 #tray,
@@ -87,6 +77,11 @@ tooltip {
   border-radius: 10px;
   margin-left: 10px;
   border-right: 0px;
+}
+
+#custom-cava {
+  color: #33cccc;
+  margin-left: 10px;
 }
 
 #backlight {
@@ -128,13 +123,6 @@ tooltip {
 
 #pulseaudio {
   color: #89b4fa;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px 0px 0px 0px;
-}
-
-#pulseaudio.microphone {
-  color: #cba6f7;
   border-left: 0px;
   border-right: 0px;
   border-radius: 0px 0px 0px 0px;

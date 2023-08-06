@@ -12,16 +12,16 @@
       "cpu",
       "memory",
       "disk",
+      "custom/cava",
       "hyprland/window"
     ],
     "modules-right": [
       "bluetooth",
       "pulseaudio",
-      "pulseaudio#microphone",
       "backlight",
       "battery",
       "clock",
-      "tray",
+      "tray"
     ],
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
@@ -30,7 +30,7 @@
     },
     "custom/icon": {
       "format": "󰣇",
-      "on-click": "~/.config/waybar/scripts/bg.sh",
+      "on-click": "$HOME/.config/waybar/scripts/bg.sh",
       "tooltip": false
     },
     "wlr/workspaces": {
@@ -53,7 +53,7 @@
         "13":"",
         "14":"󰘅",
         "15":"󰘑",
-        "16":"󰨞",
+        "16":"󰨞"
       },
       "sort-by-number":true
     },
@@ -72,6 +72,10 @@
         "tooltip": true,
         "interval": 10
     },
+    "custom/cava": {
+      "exec": "$HOME/.config/waybar/scripts/cava.sh 2> /dev/null",
+      "tooltip": false
+    },
 
     "hyprland/window": {
         "format": "{}",
@@ -89,9 +93,9 @@
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
-        "on-click": "~/.config/waybar/scripts/vol.sh L",
-        "on-click-middle": "~/.config/waybar/scripts/vol.sh M",
-        "on-click-right": "~/.config/waybar/scripts/vol.sh R",
+        "on-click": "$HOME/.config/waybar/scripts/vol.sh L",
+        "on-click-middle": "$HOME/.config/waybar/scripts/vol.sh M",
+        "on-click-right": "$HOME/.config/waybar/scripts/vol.sh R",
         "on-scroll-up": "pamixer -i 1",
         "on-scroll-down": "pamixer -d 1",
         "scroll-step": 1,
@@ -139,5 +143,5 @@
     "tray": {
         "icon-size": 25,
         "spacing": 15
-    },
+    }
 }
