@@ -9,7 +9,7 @@
 
 window#waybar {
   background: rgba(21, 18, 27, 0);
-  color: #cdefff;
+  color: #cdd6f4;
 }
 
 window#waybar.hidden {
@@ -25,7 +25,6 @@ tooltip {
   padding: 5px;
   color: #a6adc8;
   margin-right: 5px;
-  border-radius: 10px 10px 10px 10px;
 }
 
 #workspaces button.active {
@@ -35,6 +34,13 @@ tooltip {
 #workspaces button:hover {
   background: #37474f;
   border-radius: 10px;
+}
+
+window > box {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: rgb(44, 44, 44);
 }
 
 #custom-icon,
@@ -50,12 +56,11 @@ tooltip {
 #tray,
 #backlight {
   padding: 0px 10px;
-  box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
 }
 
 #custom-icon {
   color: #00bfff;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 #cpu {
@@ -87,6 +92,7 @@ tooltip {
 #tray {
   margin-left: 10px;
   margin-right: 10px;
+  background: transparent;
 }
 
 #window {
@@ -118,3 +124,9 @@ tooltip {
   color: #a6e7af;
   border-radius: 0px 10px 10px 0px;
 }
+
+#workspaces {
+  padding: 0px 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+
