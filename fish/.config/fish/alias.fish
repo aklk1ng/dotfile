@@ -23,6 +23,8 @@ alias nc "nvim --clean"
 alias H "Hyprland"
 
 alias j "joshuto"
+alias jo "bash $HOME/.config/joshuto/uberzugpp/joshuto.sh"
+
 alias reload "source ~/.config/fish/config.fish"
 
 alias cn "cargo new"
