@@ -47,7 +47,6 @@ window > box {
 #window,
 #clock,
 #cpu,
-#memory,
 #disk,
 #battery,
 #custom-cava,
@@ -67,10 +66,6 @@ window > box {
   color: #89b4ff;
   border-radius: 10px 0px 0px 10px;
   margin-left: 10px;
-}
-#memory {
-  color: #89b4ff;
-  border-radius: 0px 10px 10px 0px;
 }
 
 #disk {

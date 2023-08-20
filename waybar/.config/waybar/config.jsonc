@@ -10,7 +10,6 @@
       "custom/icon",
       "wlr/workspaces",
       "cpu",
-      "memory",
       "disk",
       "custom/cava",
       "hyprland/window"
@@ -59,11 +58,6 @@
     },
     "cpu": {
         "format": " {usage}%",
-        "tooltip": true,
-        "interval": 2
-    },
-    "memory": {
-        "format": " {}%",
         "tooltip": true,
         "interval": 2
     },
