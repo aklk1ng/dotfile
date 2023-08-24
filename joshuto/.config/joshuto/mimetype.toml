@@ -36,12 +36,7 @@ video_default = [
   { command = "qimgv", fork = true, silent = true },
 ]
 
-text_default = [
-  { command = "nvim" },
-  { command = "bat", args = [
-    "--paging=always",
-  ] },
-]
+text_default = [{ command = "nvim" }, { command = "bat", args = [""] }]
 
 reader_default = [{ command = "evince", fork = true, silent = true }]
 
