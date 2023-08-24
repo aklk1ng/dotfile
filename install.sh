@@ -5,6 +5,7 @@ dotfile_dir=$HOME/dotfile
 cd $dotfile_dir
 sudo pacman -S unzip zsh lxappearance xfce4-settings grim python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp dunst network-manager-applet copyq kitty lazygit wl-clipboard
+bat cache --build
 echo "Install yay"
 stow profile
 cd $HOME
@@ -28,7 +29,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking files..."
-stow chrome-flags fish joshuto mpd ncmpcpp ranger rofi st tmux hypr swaylock waybar dunst fastfetch cava swappy
+stow chrome-flags fish joshuto mpd ncmpcpp ranger rofi st tmux hypr swaylock waybar dunst fastfetch cava swappy bat
 echo "ending..."
 
 echo "copy fonts"
