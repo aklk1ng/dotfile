@@ -1,4 +1,4 @@
---theme="Nord"
+--theme="Catppuccin-mocha"
 --style="plain,changes,header"
 --paging=always
 --color=always
