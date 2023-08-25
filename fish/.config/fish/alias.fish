@@ -61,6 +61,6 @@ alias gd "git diff"
 alias gf "git fetch"
 
 alias ex "extract"
-alias proxy-clash "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5:://127.0.0.1:7890 && npm config set proxy=http://127.0.0.1:7890"
+alias proxy "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5:://127.0.0.1:7890 && npm config set proxy=http://127.0.0.1:7890"
 alias qqconfig "/opt/apps/com.qq.im.deepin/files/run.sh winecfg"
 alias wechatconfig "/opt/apps/com.qq.weixin.deepin/files/run.sh winecfg"

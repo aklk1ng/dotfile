@@ -17,7 +17,7 @@ source ~/.config/fish/alias.fish
 
 # run command every login
 if status is-interactive
-  proxy-clash
+  proxy
 end
 
 function fish_mode_prompt; end
