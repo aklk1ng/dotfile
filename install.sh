@@ -20,7 +20,7 @@ yay -Syu
 yay -S --noconfirm hyprland waybar swww cava \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    joshuto keyd fastfetch clipman
+    joshuto keyd fastfetch clipman yazi
 
 echo "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -29,7 +29,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking files..."
-stow chrome-flags fish joshuto mpd ncmpcpp ranger rofi st tmux hypr swaylock waybar dunst fastfetch cava swappy bat
+stow chrome-flags fish joshuto mpd ncmpcpp yazi rofi st tmux hypr swaylock waybar dunst fastfetch cava swappy bat
 echo "ending..."
 
 echo "copy fonts"
