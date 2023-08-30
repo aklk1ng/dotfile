@@ -1,60 +1,46 @@
 function fish_prompt --description 'Write out the prompt'
-    if not set -q __fish_git_prompt_show_informative_status
-        set -g __fish_git_prompt_show_informative_status 1
-    end
-    if not set -q __fish_git_prompt_hide_untrackedfiles
-        set -g __fish_git_prompt_hide_untrackedfiles 1
-    end
-    if not set -q __fish_git_prompt_color_branch
-        set -g __fish_git_prompt_color_branch magenta --bold
-    end
-    if not set -q __fish_git_prompt_showupstream
-        set -g __fish_git_prompt_showupstream informative
-    end
-    if not set -q __fish_git_prompt_color_dirtystate
-        set -g __fish_git_prompt_color_dirtystate blue
-    end
-    if not set -q __fish_git_prompt_color_stagedstate
-        set -g __fish_git_prompt_color_stagedstate yellow
-    end
-    if not set -q __fish_git_prompt_color_invalidstate
-        set -g __fish_git_prompt_color_invalidstate red
-    end
-    if not set -q __fish_git_prompt_color_untrackedfiles
-        set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
-    end
-    if not set -q __fish_git_prompt_color_cleanstate
-        set -g __fish_git_prompt_color_cleanstate green --bold
-    end
-
-    set -l color_cwd
-    set -l suffix
-    if functions -q fish_is_root_user; and fish_is_root_user
-        if set -q fish_color_cwd_root
-            set color_cwd $fish_color_cwd_root
-        else
-            set color_cwd $fish_color_cwd
-        end
-        set suffix '#'
-    else
-        set color_cwd $fish_color_end
-        set suffix '$'
-    end
-
-    # RANGER
-    set_color $fish_color_normal
-    if string length -q -- $RANGER_LEVEL
-      printf '-r-'
-    end
     # PWD
-    set_color $color_cwd
-      echo -n (prompt_pwd)
+    set_color $fish_color_cwd
+    echo -n (prompt_pwd)
     set_color normal
 
-    printf '%s ' (fish_vcs_prompt)
+    set -q __fish_git_prompt_showdirtystate
+    or set -g __fish_git_prompt_showdirtystate 1
+    set -q __fish_git_prompt_showuntrackedfiles
+    or set -g __fish_git_prompt_showuntrackedfiles 1
+    set -q __fish_git_prompt_showcolorhints
+    or set -g __fish_git_prompt_showcolorhints 1
+    set -q __fish_git_prompt_color_untrackedfiles
+    or set -g __fish_git_prompt_color_untrackedfiles yellow
+    set -q __fish_git_prompt_char_untrackedfiles
+    or set -g __fish_git_prompt_char_untrackedfiles '?'
+    set -q __fish_git_prompt_color_invalidstate
+    or set -g __fish_git_prompt_color_invalidstate red
+    set -q __fish_git_prompt_char_invalidstate
+    or set -g __fish_git_prompt_char_invalidstate '!'
+    set -q __fish_git_prompt_color_dirtystate
+    or set -g __fish_git_prompt_color_dirtystate blue
+    set -q __fish_git_prompt_char_dirtystate
+    or set -g __fish_git_prompt_char_dirtystate '*'
+    set -q __fish_git_prompt_char_stagedstate
+    or set -g __fish_git_prompt_char_stagedstate '✚'
+    set -q __fish_git_prompt_color_cleanstate
+    or set -g __fish_git_prompt_color_cleanstate purple
+    set -q __fish_git_prompt_char_cleanstate
+    or set -g __fish_git_prompt_char_cleanstate '✓'
+    set -q __fish_git_prompt_color_stagedstate
+    or set -g __fish_git_prompt_color_stagedstate yellow
+    set -q __fish_git_prompt_color_branch_dirty
+    or set -g __fish_git_prompt_color_branch_dirty red
+    set -q __fish_git_prompt_color_branch_staged
+    or set -g __fish_git_prompt_color_branch_staged yellow
+    set -q __fish_git_prompt_color_branch
+    or set -g __fish_git_prompt_color_branch purple
+    set -q __fish_git_prompt_char_stateseparator
+    or set -g __fish_git_prompt_char_stateseparator '⚡'
+    fish_vcs_prompt '|%s'
+    echo
 
-    echo -n $prompt_status
+    echo -n '$ '
     set_color normal
-
-    echo -n "$suffix "
 end
