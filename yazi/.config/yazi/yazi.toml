@@ -18,7 +18,7 @@ folder = [
 archive = [{ exec = 'unar "$1"', display_name = "Extract here" }]
 text = [{ exec = '$EDITOR "$@"', block = true }]
 image = [
-  { exec = 'open "$@"', display_name = "Open" },
+  { exec = 'mupdf "$@"', display_name = "Open" },
   { exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show EXIF" },
 ]
 video = [
