@@ -39,7 +39,7 @@ tooltip {
 
 window > box {
   margin-top: 5px;
-  background-color: rgba(44, 44, 44, 0.8);
+  background-color: rgba(44, 44, 44, 0.6);
 }
 
 #custom-icon,
@@ -58,20 +58,16 @@ window > box {
 
 #custom-icon {
   color: #00bfff;
-  border-radius: 10px 0px 0px 10px;
 }
 
 #cpu {
   color: #89b4ff;
-  border-radius: 10px 0px 0px 10px;
   margin-left: 10px;
 }
 
 #disk {
   color: #fab387;
-  border-radius: 10px;
   margin-left: 10px;
-  border-right: 0px;
 }
 
 #custom-cava {
@@ -79,46 +75,24 @@ window > box {
   margin-left: 10px;
 }
 
-#backlight {
-  border-radius: 0px 0px 0px 0px;
-}
-
 #tray {
   margin-left: 10px;
   background-color: #9c9c9c;
 }
 
-#window {
-  margin-left: 10px;
-  margin-right: 0px;
-}
-
 #clock {
   color: #fab39f;
-  border-radius: 10px 10px 10px 10px;
   margin-left: 10px;
-  border-right: 0px;
 }
 
 #bluetooth {
   color: #89b4ff;
-  border-radius: 10px 0px 0px 10px;
-  margin-right: 0px;
 }
 
 #pulseaudio {
   color: #89b4ff;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 0px 0px 0px 0px;
 }
 
 #battery {
   color: #a6e7af;
-  border-radius: 0px 10px 10px 0px;
-}
-
-#workspaces {
-  padding: 0px 0px;
-  border-radius: 0px 10px 10px 0px;
 }

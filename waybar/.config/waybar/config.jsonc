@@ -11,8 +11,7 @@
       "wlr/workspaces",
       "cpu",
       "disk",
-      "custom/cava",
-      "hyprland/window"
+      "custom/cava"
     ],
     "modules-right": [
       "bluetooth",
@@ -71,10 +70,6 @@
       "tooltip": false
     },
 
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 35
-    },
     "bluetooth": {
       "format": " {status}",
       "format-disabled": "", // an empty format will hide the module
@@ -104,15 +99,6 @@
         }
     },
 
-    "pulseaudio#microphone": {
-        "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
-        "scroll-step": 5
-    },
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
