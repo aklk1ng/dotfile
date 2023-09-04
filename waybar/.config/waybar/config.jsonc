@@ -8,7 +8,7 @@
     "margin-right": 10,
     "modules-left": [
       "custom/icon",
-      "wlr/workspaces",
+      "hyprland/workspaces",
       "cpu",
       "disk",
       "custom/cava"
@@ -31,7 +31,7 @@
       "on-click": "$HOME/.config/waybar/scripts/bg.sh",
       "tooltip": false
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
       "format":"{icon}",
       "all-outputs": true,
       "on-click": "activate",
