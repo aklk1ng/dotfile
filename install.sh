@@ -34,6 +34,7 @@ echo "ending..."
 
 echo "copy fonts"
 sudo cp $dotfile_dir/JetBrainsMono -r /usr/share/fonts/
+sudo cp $dotfile_dir/FiraCode -r /usr/share/fonts/
 sudo fc-cache -f -v
 echo "ending..."
 
