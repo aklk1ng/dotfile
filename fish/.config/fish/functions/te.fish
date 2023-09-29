@@ -1,7 +1,7 @@
 function te
   if string length -q -- $argv[1]
-    tree -L $argv[1] --gitignore
+    eza -TL $argv[1] --git-ignore
   else
-    tree -L 2 --gitignore
+    eza -TL 2 --git-ignore
   end
 end

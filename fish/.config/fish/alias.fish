@@ -1,6 +1,6 @@
 alias ls "ls --color=auto"
 alias la "ls -A"
-alias ll "exa -l --icons"
+alias ll "eza -l --icons"
 alias lla "ll -A"
 alias f "nvim (fzf --preview 'bat {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down)"
 alias r "yazi"
