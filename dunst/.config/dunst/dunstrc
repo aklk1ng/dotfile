@@ -13,7 +13,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = JetBrainsMono Nerd Font 19
+    font = FiraCode Nerd Font 19
     line_height = 0
     markup = full
     format = "<span><b>%s %p</b></span>\n%b"
