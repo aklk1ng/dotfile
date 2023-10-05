@@ -3,8 +3,8 @@
 dotfile_dir=$HOME/dotfile
 
 cd $dotfile_dir
-sudo pacman -S unzip zsh lxappearance xfce4-settings grim python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp dunst network-manager-applet copyq kitty lazygit wl-clipboard mupdf eza
+sudo pacman -S unzip lxappearance xfce4-settings grim python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
+    ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp dunst network-manager-applet copyq kitty lazygit wl-clipboard mupdf eza wofi
 bat cache --build
 echo "Install yay"
 stow profile
@@ -29,7 +29,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking files..."
-stow chrome-flags fish joshuto mpd ncmpcpp yazi rofi st tmux hypr swaylock waybar dunst fastfetch cava swappy bat
+stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi rofi wofi tmux hypr swaylock waybar dunst fastfetch cava swappy bat gtk3 hypr-empty
 echo "ending..."
 
 echo "copy fonts"
