@@ -17,11 +17,12 @@ source ~/.config/fish/alias.fish
 
 # run command every login
 if status is-interactive
-  proxy
+    proxy
 end
 
-function fish_mode_prompt; end
+function fish_mode_prompt
+end
 
 set -gx WASMTIME_HOME "$HOME/.wasmtime"
 
-string match -r ".wasmtime" "$PATH" > /dev/null; or set -gx PATH "$WASMTIME_HOME/bin" $PATH
+string match -r ".wasmtime" "$PATH" >/dev/null; or set -gx PATH "$WASMTIME_HOME/bin" $PATH
