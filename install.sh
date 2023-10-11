@@ -3,8 +3,11 @@
 dotfile_dir=$HOME/dotfile
 
 cd $dotfile_dir
-sudo pacman -S unzip lxappearance xfce4-settings grim python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp dunst network-manager-applet copyq kitty lazygit wl-clipboard mupdf eza wofi glow
+sudo pacman -S unzip lxappearance xfce4-settings grim \
+    python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
+    ranger rofi tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp \
+    dunst network-manager-applet copyq kitty lazygit wl-clipboard mupdf eza wofi glow \
+    swaybg
 bat cache --build
 echo "Install yay"
 stow profile
@@ -17,10 +20,10 @@ echo "ending..."
 echo "Install some packages"
 yay -Syu
 
-yay -S --noconfirm hyprland waybar swww cava \
+yay -S --noconfirm hyprland waybar cava \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    joshuto keyd fastfetch clipman yazi
+    joshuto keyd fastfetch yazi
 
 echo "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -29,7 +32,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking files..."
-stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi rofi wofi tmux hypr swaylock waybar dunst fastfetch cava bat gtk3 hypr-empty
+stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar dunst fastfetch cava bat gtk3 hypr-empty
 echo "ending..."
 
 echo "copy fonts"

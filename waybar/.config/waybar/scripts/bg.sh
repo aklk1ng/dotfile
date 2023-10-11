@@ -1,3 +1,11 @@
 #!/bin/bash
 
-swww img --transition-type wipe --transition-duration 2 --transition-fps 90 --transition-angle 30 $(find ~/wallpaper/bg/ -name "*.png" | shuf -n1)
+swaybg -i $(find ~/wallpaper/bg/ -name "*.png" | shuf -n1) -m fill &
+
+sleep 1
+cur=$(ps aux | grep swaybg | grep -v grep | awk '{print $2}' | tail -n 1)
+for pid in $(pgrep -f swaybg); do
+    if [[ $pid != $cur ]]; then
+        kill $pid
+    fi
+done
