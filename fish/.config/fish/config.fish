@@ -4,8 +4,6 @@ set -gx TERM xterm-256color
 set -gx EDITOR nvim
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
-set -gx PATH ~/.erg/bin $PATH
-set -gx PATH ~/.local/share/bob/nvim-bin/ $PATH
 set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 # Go
