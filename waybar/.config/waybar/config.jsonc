@@ -23,8 +23,7 @@
     ],
     "clock": {
       "tooltip-format": "{calendar}",
-      "format": "{:%H:%M %A %b %d}",
-      "interval": 1
+      "format": "{:%R %A %b %d}"
     },
     "custom/icon": {
       "format": "󰣇",
