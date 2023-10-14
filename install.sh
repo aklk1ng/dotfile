@@ -51,9 +51,9 @@ echo "ending..."
 
 cd $HOME
 echo "clone repos"
-git clone https://github.com/aklk1ng/yt-dlp.git
+git clone --depth 1https://github.com/aklk1ng/yt-dlp.git
 git clone https://github.com/aklk1ng/scripts.git
-git clone https://github.com/aklk1ng/wallpaper.git
+git clone --depth 1 https://github.com/aklk1ng/wallpaper.git
 git clone https://github.com/aklk1ng/keyd.git
 sudo cp keyd/default.conf /etc/keyd/
 systemctl enable keyd.service
