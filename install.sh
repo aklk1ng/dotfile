@@ -23,7 +23,7 @@ yay -Syu
 yay -S --noconfirm hyprland waybar cava \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    joshuto keyd fastfetch yazi
+    joshuto keyd fastfetch yazi-git
 
 echo "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

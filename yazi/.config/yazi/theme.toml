@@ -4,6 +4,9 @@ active = { fg = "#1E2031", bg = "#80AEFA" }
 inactive = { fg = "#C8D3F8", bg = "#484D66" }
 max_width = 1
 
+[manager]
+border_symbol = " "
+
 [status]
 primary = { normal = "#80AEFA", select = "#CD9EFC", unset = "#FFA577" }
 secondary = { normal = "#1E2031", select = "#23273B", unset = "#23273B" }
