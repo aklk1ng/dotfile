@@ -1,6 +1,6 @@
 
 [tab]
-active = { fg = "#1E2031", bg = "#80AEFA" }
+active = { fg = "#1E2031", bg = "#57C7FF" }
 inactive = { fg = "#C8D3F8", bg = "#484D66" }
 max_width = 1
 
@@ -8,7 +8,7 @@ max_width = 1
 border_symbol = " "
 
 [status]
-primary = { normal = "#80AEFA", select = "#CD9EFC", unset = "#FFA577" }
+primary = { normal = "#57C7FF", select = "#CD9EFC", unset = "#FFA577" }
 secondary = { normal = "#1E2031", select = "#23273B", unset = "#23273B" }
 tertiary = { normal = "#6D738F", select = "#6D738F", unset = "#6D738F" }
 body = { normal = "#484D66", select = "#484D66", unset = "#484D66" }
@@ -55,7 +55,7 @@ rules = [
 
   # Fallback
   { name = "*", fg = "#C8D3F8" },
-  { name = "*/", fg = "#80AEFA" },
+  { name = "*/", fg = "#57C7FF" },
 ]
 
 [icons]
