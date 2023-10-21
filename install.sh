@@ -32,7 +32,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking files..."
-stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar dunst fastfetch cava bat gtk3 hypr-empty
+stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar dunst cava bat gtk3 hypr-empty
 echo "ending..."
 
 echo "copy fonts"
