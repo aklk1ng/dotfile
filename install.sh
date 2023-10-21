@@ -3,10 +3,10 @@
 dotfile_dir=$HOME/dotfile
 
 cd $dotfile_dir
-sudo pacman -S unzip lxappearance xfce4-settings grim \
+sudo pacman -S unzip lxappearance xfce4-settings grim zoxide \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    ranger tmux bat ripgrep cmake fzf mdcat lolcat npm yarn pamixer yt-dlp \
-    dunst network-manager-applet copyq kitty lazygit wl-clipboard mupdf eza wofi glow \
+    ranger tmux bat ripgrep cmake fzf lolcat npm yarn pamixer yt-dlp \
+    dunst network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
     swaybg
 bat cache --build
 echo "Install yay"
