@@ -131,6 +131,9 @@ keymap = [
     ":",
   ], exec = "shell --block" },
   { on = [
+    "<C-g>",
+  ], exec = "shell --block lazygit" },
+  { on = [
     ".",
   ], exec = "hidden toggle" },
   { on = [
