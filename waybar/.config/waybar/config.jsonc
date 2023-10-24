@@ -25,7 +25,7 @@
       "format": "{:%R %A %b %d}"
     },
     "custom/icon": {
-      "format": "󰣇",
+      "format": " ",
       "on-click": "$HOME/.config/waybar/scripts/bg.sh",
       "tooltip": false
     },
