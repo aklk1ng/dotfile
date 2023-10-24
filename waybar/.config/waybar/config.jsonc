@@ -10,8 +10,7 @@
       "custom/icon",
       "hyprland/workspaces",
       "cpu",
-      "disk",
-      "custom/cava"
+      "disk"
     ],
     "modules-right": [
       "bluetooth",
@@ -64,11 +63,6 @@
         "tooltip": true,
         "interval": 10
     },
-    "custom/cava": {
-      "exec": "$HOME/.config/waybar/scripts/cava.sh 2> /dev/null",
-      "tooltip": false
-    },
-
     "bluetooth": {
       "format": " {status}",
       "format-disabled": "", // an empty format will hide the module

@@ -47,7 +47,6 @@ window > box {
 #cpu,
 #disk,
 #battery,
-#custom-cava,
 #pulseaudio,
 #bluetooth,
 #tray,
@@ -66,11 +65,6 @@ window > box {
 
 #disk {
   color: #fab387;
-  margin-left: 10px;
-}
-
-#custom-cava {
-  color: #33cccc;
   margin-left: 10px;
 }
 
