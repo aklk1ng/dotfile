@@ -3,7 +3,7 @@
 dotfile_dir=$HOME/dotfile
 
 cd $dotfile_dir
-sudo pacman -S unzip lxappearance xfce4-settings grim zoxide \
+sudo pacman -S unzip lxappearance xfce4-settings grim zoxide tree-sitter \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     ranger tmux bat ripgrep cmake fzf lolcat npm yarn pamixer yt-dlp \
     dunst network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
