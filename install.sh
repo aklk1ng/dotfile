@@ -6,7 +6,7 @@ cd $dotfile_dir
 sudo pacman -S unzip lxappearance xfce4-settings grim zoxide tree-sitter \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     ranger tmux bat ripgrep cmake fzf lolcat npm yarn pamixer yt-dlp \
-    dunst network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
+    network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
     swaybg
 bat cache --build
 echo "Install yay"
@@ -32,7 +32,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking files..."
-stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar dunst cava bat gtk3 hypr-empty
+stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
 echo "ending..."
 
 echo "copy fonts"
