@@ -2,17 +2,17 @@
 
 # Define the environment variables
 ENV_VARS=(
-  'GTK_IM_MODULE=fcitx5'
-  'QT_IM_MODULE=fcitx5'
-  'XMODIFIERS=@im=fcitx5'
-  'SDL_IM_MODULE=fcitx5'
-  'GLFW_IM_MODULE=ibus'
-  'XCURSOR_SIZE=30'
+    'GTK_IM_MODULE=fcitx5'
+    'QT_IM_MODULE=fcitx5'
+    'XMODIFIERS=@im=fcitx5'
+    'SDL_IM_MODULE=fcitx5'
+    'GLFW_IM_MODULE=ibus'
+    'XCURSOR_SIZE=30'
 )
 
 # Loop through the environment variables and add them to /etc/environment
 for var in "${ENV_VARS[@]}"; do
-  echo "$var" | sudo tee -a /etc/environment
+    echo "$var" | sudo tee -a /etc/environment
 done
 
 dotfile_dir=$HOME/dotfile
@@ -22,7 +22,7 @@ sudo pacman -S git unzip lxappearance xfce4-settings grim zoxide tree-sitter \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     ranger tmux bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
-    swaybg
+    swaybg --noconfirm
 bat cache --build
 
 # git config
@@ -45,10 +45,10 @@ echo "ending..."
 echo "Install some packages"
 yay -Syu
 
-yay -S --noconfirm hyprland waybar cava \
+yay -S hyprland waybar cava \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    joshuto keyd fastfetch yazi-git
+    joshuto keyd fastfetch yazi-git --noconfirm
 
 cd $dotfile_dir
 
