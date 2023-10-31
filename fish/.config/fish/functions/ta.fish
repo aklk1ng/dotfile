@@ -8,5 +8,6 @@ function ta
         set new_file $name$argv[2]
 
         ffmpeg -i $argv[1] $new_file
+        rm $argv[1]
     end
 end
