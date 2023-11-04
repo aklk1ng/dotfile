@@ -29,6 +29,7 @@ bat cache --build
 git config --global user.name "aklk1ng"
 git config --global user.email "2628084745@qq.com"
 git config --global core.editor "nvim"
+git config --global core.ui true
 
 echo "clone neovim config"
 git clone https://github.com/aklk1ng/nvim "$HOME"/.config/nvim
