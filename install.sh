@@ -46,28 +46,32 @@ echo "ending..."
 echo "Install some packages"
 yay -Syu
 
-yay -S hyprland waybar cava \
+yay -S hyprland waybar cava rustup \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
     joshuto keyd fastfetch yazi-git --noconfirm
 
+echo "Install hypr-empty"
+cargo install --git https://github.com/aklk1ng/hypr-empty.git
+echo "ending..."
+
 cd $dotfile_dir
 
-echo "linking files..."
+echo "linking dotfiles"
 stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
 echo "ending..."
 
-echo "copy FiraCode..."
+echo "copy fonts"
 sudo cp $dotfile_dir/FiraCode -r /usr/share/fonts/
 sudo fc-cache -v
 echo "ending..."
 
 echo "save fish theme"
-fish_config theme save ayu\ Dark
-chsh -s $(which fish)
+fish_config theme save Base16\ Default\ Dark
+sudo chsh -s $(which fish)
 echo "ending..."
 
-echo "start mpd service..."
+echo "start mpd service"
 systemctl start mpd.service --user
 echo "ending..."
 
