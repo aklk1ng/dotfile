@@ -21,6 +21,12 @@ end
 function fish_mode_prompt
 end
 
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec Hyprland
+    end
+end
+
 set -gx WASMTIME_HOME "$HOME/.wasmtime"
 
 string match -r ".wasmtime" "$PATH" >/dev/null; or set -gx PATH "$WASMTIME_HOME/bin" $PATH
