@@ -6,14 +6,10 @@ alias f "nvim (fzf --preview 'bat {}' --bind ctrl-u:preview-page-up,ctrl-d:previ
 alias r "yazi"
 alias n "fastfetch"
 alias t "tmux new-session -s 🎵"
-alias fishpond "asciiquarium"
-alias wt "wttr"
 alias ki "nvim ~/.config/kitty/kitty.conf"
 alias py "python3"
 alias readme "nvim README.md"
 alias lg "lazygit"
-
-alias nc "nvim --clean"
 
 alias H "Hyprland"
 
@@ -61,4 +57,3 @@ alias e "extract"
 alias gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
 alias npmconfig "npm config set proxy=http://127.0.0.1:7890"
 alias proxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5:://127.0.0.1:7890"
-alias wechatconfig "/opt/apps/com.qq.weixin.deepin/files/run.sh winecfg"
