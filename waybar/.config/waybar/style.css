@@ -9,7 +9,6 @@
 window#waybar {
   margin-top: 5px;
   background-color: rgba(44, 44, 44, 0);
-  color: #cdd6f4;
 }
 
 window#waybar.hidden {
@@ -38,7 +37,7 @@ tooltip {
 
 window > box {
   margin-top: 5px;
-  background-color: rgba(44, 44, 44, 0.6);
+  background-color: rgba(50, 50, 50, 0.6);
 }
 
 #custom-icon,
@@ -69,7 +68,6 @@ window > box {
 }
 
 #tray {
-  margin-left: 10px;
   background-color: #9c9c9c;
 }
 
