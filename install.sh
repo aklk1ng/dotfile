@@ -32,7 +32,7 @@ git config --global core.editor "nvim"
 git config --global core.ui true
 
 echo "clone neovim config"
-git clone https://github.com/aklk1ng/nvim "$HOME"/.config/nvim
+git clone https://github.com/aklk1ng/nvim --depth 1 "$HOME"/.config/nvim
 echo "ending..."
 
 echo "Install yay"
@@ -80,7 +80,7 @@ echo "clone repos"
 git clone https://github.com/aklk1ng/yt-dlp.git --depth 1
 git clone https://github.com/aklk1ng/scripts.git --depth 1
 git clone https://github.com/aklk1ng/wallpaper.git --depth 1
-git clone https://github.com/aklk1ng/keyd.git
+git clone https://github.com/aklk1ng/keyd.git --depth 1
 sudo cp keyd/default.conf /etc/keyd/
 systemctl enable keyd.service
 systemctl start keyd.service
