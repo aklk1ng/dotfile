@@ -18,7 +18,7 @@ done
 dotfile_dir=$HOME/dotfile
 
 cd $dotfile_dir
-sudo pacman -S git unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
+sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
     python-requests python-pipx slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     ranger tmux lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
@@ -58,7 +58,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking dotfiles"
-stow chrome-flags fish kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
+stow chrome-flags fish dunst kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
 echo "ending..."
 
 echo "copy fonts"
