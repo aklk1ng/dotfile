@@ -3,6 +3,7 @@
 # Define the environment variables
 ENV_VARS=(
     'GTK_IM_MODULE=fcitx5'
+    # 'GTK_IM_MODULE=wayland'
     'QT_IM_MODULE=fcitx5'
     'XMODIFIERS=@im=fcitx5'
     'SDL_IM_MODULE=fcitx5'
