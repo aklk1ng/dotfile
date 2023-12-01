@@ -51,7 +51,7 @@ yay -Syu
 yay -S hyprland waybar cava rustup \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    joshuto keyd fastfetch yazi-git --noconfirm
+    keyd fastfetch yazi-git --noconfirm
 
 echo "Install hypr-empty"
 cargo install --git https://github.com/aklk1ng/hypr-empty.git
@@ -60,7 +60,7 @@ echo "ending..."
 cd $dotfile_dir
 
 echo "linking dotfiles"
-stow chrome-flags fish dunst kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
+stow chrome-flags fish dunst kitty mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
 echo "ending..."
 
 echo "config mpd"

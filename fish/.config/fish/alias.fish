@@ -3,7 +3,6 @@ alias la "ls -A"
 alias ll "eza -l --icons"
 alias lla "ll -A"
 alias f "nvim (fzf --reverse --preview 'bat {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down)"
-alias r "yazi"
 alias n "fastfetch"
 alias t "tmux new-session -s 🎵"
 alias ki "nvim ~/.config/kitty/kitty.conf"
@@ -13,8 +12,7 @@ alias lg "lazygit"
 
 alias H "Hyprland"
 
-alias j "joshuto"
-alias jo "bash $HOME/.config/joshuto/uberzugpp/joshuto.sh"
+alias j "yazi"
 
 alias reload "source ~/.config/fish/config.fish"
 

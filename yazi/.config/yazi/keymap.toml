@@ -152,6 +152,17 @@ keymap = [
     "f",
   ], exec = "jump fzf" },
 
+  # Find
+  { on = [
+    "/",
+  ], exec = "find --smart" },
+  { on = [
+    "n",
+  ], exec = "find_arrow" },
+  { on = [
+    "N",
+  ], exec = "find_arrow --previous" },
+
   # Copy
   { on = [
     "c",
@@ -285,6 +296,10 @@ keymap = [
     "g",
     "<Space>",
   ], exec = "cd --interactive" },
+  # Help
+  { on = [
+    "?",
+  ], exec = "help", desc = "Open help" },
 ]
 
 [tasks]
@@ -399,4 +414,52 @@ keymap = [
   # Undo/Redo
   { on = ["u"], exec = "undo" },
   { on = ["<C-r>"], exec = "redo" },
+]
+
+[help]
+
+keymap = [
+  { on = [
+    "<Esc>",
+  ], exec = "escape", desc = "Clear the filter, or hide the help" },
+  { on = [
+    "q",
+  ], exec = "close", desc = "Exit the process" },
+  { on = [
+    "<C-q>",
+  ], exec = "close", desc = "Hide the help" },
+
+  # Navigation
+  { on = [
+    "k",
+  ], exec = "arrow -1", desc = "Move cursor up" },
+  { on = [
+    "j",
+  ], exec = "arrow 1", desc = "Move cursor down" },
+
+  { on = [
+    "K",
+  ], exec = "arrow -5", desc = "Move cursor up 5 lines" },
+  { on = [
+    "J",
+  ], exec = "arrow 5", desc = "Move cursor down 5 lines" },
+
+  { on = [
+    "<Up>",
+  ], exec = "arrow -1", desc = "Move cursor up" },
+  { on = [
+    "<Down>",
+  ], exec = "arrow 1", desc = "Move cursor down" },
+
+  { on = [
+    "<S-Up>",
+  ], exec = "arrow -5", desc = "Move cursor up 5 lines" },
+  { on = [
+    "<S-Down>",
+  ], exec = "arrow 5", desc = "Move cursor down 5 lines" },
+
+  # Filtering
+  { on = [
+    "/",
+  ], exec = "filter", desc = "Apply a filter for the help items" },
 ]
