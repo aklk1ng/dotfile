@@ -17,6 +17,7 @@ for var in "${ENV_VARS[@]}"; do
 done
 
 dotfile_dir=$HOME/dotfile
+mpd_dir=$HOME/.config/mpd
 
 cd $dotfile_dir
 sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
@@ -60,6 +61,13 @@ cd $dotfile_dir
 
 echo "linking dotfiles"
 stow chrome-flags fish dunst kitty joshuto mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
+echo "ending..."
+
+echo "config mpd"
+touch $mpd_dir/pid
+touch $mpd_dir/state
+touch $mpd_dir/sticker.sql
+mkdir $mpd_dir/playlists
 echo "ending..."
 
 echo "copy fonts"
