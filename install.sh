@@ -34,7 +34,7 @@ git config --global core.editor "nvim"
 git config --global core.ui true
 
 echo "clone neovim config"
-git clone https://github.com/aklk1ng/nvim --depth 1 "$HOME"/.config/nvim
+git clone https://github.com/aklk1ng/nvim "$HOME"/.config/nvim
 echo "ending..."
 
 echo "Install yay"
