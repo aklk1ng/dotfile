@@ -53,7 +53,6 @@ alias gf "git fetch"
 
 alias yayq="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
 
-alias e extract
 alias gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
 alias npmconfig "npm config set proxy=http://127.0.0.1:7890"
 alias setproxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5:://127.0.0.1:7890"
