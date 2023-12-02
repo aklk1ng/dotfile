@@ -131,8 +131,11 @@ keymap = [
     ":",
   ], exec = "shell --block" },
   { on = [
+    "<C-s>",
+  ], exec = '''shell "$SHELL" --block --confirm''' },
+  { on = [
     "<C-g>",
-  ], exec = "shell --block lazygit" },
+  ], exec = "shell lazygit --block --confirm" },
   { on = [
     ".",
   ], exec = "hidden toggle" },
@@ -142,12 +145,6 @@ keymap = [
   { on = [
     "S",
   ], exec = "search rg" },
-  { on = [
-    "<C-s>",
-  ], exec = "search none" },
-  { on = [
-    "z",
-  ], exec = "jump zoxide" },
   { on = [
     "f",
   ], exec = "jump fzf" },
