@@ -27,12 +27,6 @@ function fish_prompt --description 'Write out the prompt'
     or set -g __fish_git_prompt_color_cleanstate magenta
     set -q __fish_git_prompt_char_cleanstate
     or set -g __fish_git_prompt_char_cleanstate '✓'
-    set -q __fish_git_prompt_color_stagedstate
-    or set -g __fish_git_prompt_color_stagedstate yellow
-    set -q __fish_git_prompt_color_branch_dirty
-    or set -g __fish_git_prompt_color_branch_dirty red
-    set -q __fish_git_prompt_color_branch_staged
-    or set -g __fish_git_prompt_color_branch_staged yellow
     set -q __fish_git_prompt_color_branch
     or set -g __fish_git_prompt_color_branch magenta
     set -q __fish_git_prompt_char_stateseparator
