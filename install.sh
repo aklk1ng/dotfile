@@ -1,6 +1,8 @@
 #! /bin/bash
 
-# Define the environment variables
+source ./util.sh
+
+action "Define the environment variables"
 ENV_VARS=(
     'GTK_IM_MODULE=fcitx5'
     # 'GTK_IM_MODULE=wayland'
@@ -15,16 +17,19 @@ ENV_VARS=(
 for var in "${ENV_VARS[@]}"; do
     echo "$var" | sudo tee -a /etc/environment
 done
+ok "ending..."
 
 dotfile_dir=$HOME/dotfile
-mpd_dir=$HOME/.config/mpd
+config_dir=$HOME/.config
+cache_dir=$HOME/.cache
 
-cd $dotfile_dir
+action "Install packages by pacman"
 sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
     python-requests python-pipx slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    ranger tmux lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
+    ranger tmux waybar fastfetch lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
     swaybg --noconfirm
+ok "ending..."
 bat cache --build
 
 # git config
@@ -33,64 +38,80 @@ git config --global user.email "2628084745@qq.com"
 git config --global core.editor "nvim"
 git config --global core.ui true
 
-echo "clone neovim config"
-git clone https://github.com/aklk1ng/nvim "$HOME"/.config/nvim
-echo "ending..."
+action "clone neovim config"
+git clone https://github.com/aklk1ng/nvim $HOME/.config/nvim
+ok "ending..."
 
-echo "Install yay"
+if [[ ! -d $dotfile_dir ]]; then
+    mkdir $dotfile_dir
+fi
+
+action "Install yay"
+cd $dotfile_dir
 stow profile
 cd $HOME
-sudo git clone https://aur.archlinux.org/yay.git
+git clone https://aur.archlinux.org/yay.git
 cd $HOME/yay
 makepkg -si
-echo "ending..."
+ok "ending..."
 
-echo "Install some packages"
+action "Install packages by yay"
 yay -Syu
-
-yay -S hyprland waybar cava rustup \
+yay -S hyprland cava rustup \
     swaylock-effects wlogout \
     xdg-desktop-portal-hyprland \
-    keyd fastfetch yazi-git --noconfirm
+    keyd yazi-git --noconfirm
+ok "ending..."
 
-echo "Install hypr-empty"
+action "Install hypr-empty"
 cargo install --git https://github.com/aklk1ng/hypr-empty.git
-echo "ending..."
+ok "ending..."
 
 cd $dotfile_dir
 
-echo "linking dotfiles"
+action "linking dotfiles"
+if [[ ! -d $config_dir ]]; then
+    mkdir $config_dir
+fi
 stow chrome-flags fish dunst kitty mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
-echo "ending..."
+ok "ending..."
 
-echo "config mpd"
-touch $mpd_dir/pid
-touch $mpd_dir/state
-touch $mpd_dir/sticker.sql
-mkdir $mpd_dir/playlists
-echo "ending..."
+action "config mpd"
+if [[ ! -d $cache_dir ]]; then
+    mkdir $cache_dir
+fi
+touch $cache_dir/log
+touch $cache_dir/database
+touch $config_fir/mpd/pid
+touch $config_fir/mpd/state
+touch $config_fir/mpd/sticker.sql
+mkdir $config_fir/mpd/playlists
+ok "ending..."
 
-echo "copy fonts"
+action "copy fonts"
 sudo cp $dotfile_dir/FiraCode -r /usr/share/fonts/
 sudo fc-cache -v
-echo "ending..."
+ok "ending..."
 
-echo "save fish theme"
+action "save fish theme"
 fish_config theme save Base16\ Default\ Dark
 sudo chsh -s $(which fish)
-echo "ending..."
+ok "ending..."
 
-echo "start mpd service"
+action "start mpd service"
 systemctl start mpd.service --user
-echo "ending..."
+ok "ending..."
 
 cd $HOME
-echo "clone repos"
+action "clone repos"
 git clone https://github.com/aklk1ng/yt-dlp.git --depth 1
 git clone https://github.com/aklk1ng/scripts.git --depth 1
 git clone https://github.com/aklk1ng/wallpaper.git --depth 1
 git clone https://github.com/aklk1ng/keyd.git --depth 1
+ok "ending..."
+
+action "start keyd"
 sudo cp keyd/default.conf /etc/keyd/
 systemctl enable keyd.service
 systemctl start keyd.service
-echo "ending..."
+ok "ending..."
