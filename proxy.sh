@@ -6,8 +6,6 @@ sudo pacman -S wget clash
 
 git config --global http.proxy http://127.0.0.1:7890
 git config --global https.proxy http://127.0.0.1:7890
-git config --global http.postBuffer 524288000
-git config --global https.postBuffer 524288000
 
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5:://127.0.0.1:7890
 npm config set proxy=http://127.0.0.1:7890
