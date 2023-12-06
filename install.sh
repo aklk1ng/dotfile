@@ -41,6 +41,7 @@ git config --global http.postBuffer 524288000
 git config --global https.postBuffer 524288000
 
 action "clone neovim config"
+git clone https://github.com/aklk1ng/whiskyline.nvim --depth 1 $HOME/workspace
 git clone https://github.com/aklk1ng/nvim $HOME/.config/nvim
 ok "ending..."
 
