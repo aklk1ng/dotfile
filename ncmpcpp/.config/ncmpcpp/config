@@ -1,5 +1,5 @@
-ncmpcpp_directory = ~/.ncmpcpp
-lyrics_directory = ~/.ncmpcpp/lyrics
+ncmpcpp_directory = ~/.cache/ncmpcpp
+lyrics_directory = ~/.cache/ncmpcpp/lyrics
 mpd_music_dir = ~/yt-dlp/music/
 
 visualizer_in_stereo = "no"
@@ -24,8 +24,6 @@ statusbar_visibility = "no"
 titles_visibility = "no"
 
 mouse_support = "yes"
-
-follow_now_playing_lyrics = yes
 fetch_lyrics_for_current_song_in_background = yes
 
 progressbar_look = "▃▃ "
