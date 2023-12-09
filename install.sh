@@ -22,6 +22,7 @@ ok "ending..."
 dotfile_dir=$HOME/dotfile
 config_dir=$HOME/.config
 cache_dir=$HOME/.cache
+workspace_dir=$HOME/workspace
 
 action "Install packages by pacman"
 sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
@@ -41,7 +42,7 @@ git config --global http.postBuffer 524288000
 git config --global https.postBuffer 524288000
 
 action "clone neovim config"
-git clone https://github.com/aklk1ng/whiskyline.nvim --depth 1 $HOME/workspace
+git clone https://github.com/aklk1ng/whiskyline.nvim --depth 1 $workspace_dir
 git clone https://github.com/aklk1ng/nvim $HOME/.config/nvim
 ok "ending..."
 
