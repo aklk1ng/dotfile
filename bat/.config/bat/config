@@ -1,4 +1,3 @@
 --theme="Solarized (dark)"
---style="plain,changes,header"
---paging=always
+--style="full"
 --color=always
