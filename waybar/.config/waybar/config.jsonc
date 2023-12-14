@@ -9,8 +9,7 @@
     "modules-left": [
       "custom/icon",
       "hyprland/workspaces",
-      "cpu",
-      "disk"
+      "cpu"
     ],
     "modules-right": [
       "bluetooth",
@@ -57,11 +56,6 @@
         "format": " {usage}%",
         "tooltip": true,
         "interval": 2
-    },
-    "disk": {
-        "format": " {percentage_used}% ({free})",
-        "tooltip": true,
-        "interval": 10
     },
     "bluetooth": {
       "format": " {status}",

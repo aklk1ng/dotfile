@@ -44,7 +44,6 @@ window > box {
 #window,
 #clock,
 #cpu,
-#disk,
 #battery,
 #pulseaudio,
 #bluetooth,
@@ -59,11 +58,6 @@ window > box {
 
 #cpu {
   color: #89b4ff;
-  margin-left: 10px;
-}
-
-#disk {
-  color: #fab387;
   margin-left: 10px;
 }
 
