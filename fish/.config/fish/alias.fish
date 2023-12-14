@@ -4,7 +4,7 @@ alias ll "eza -l --icons"
 alias lla "ll -A"
 alias f "fzf --reverse --preview 'bat {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down | xargs -n 1 nvim"
 alias n fastfetch
-alias t "tmux new-session -s 🎵"
+alias t "tmux new-session -s dev"
 alias ki "nvim ~/.config/kitty/kitty.conf"
 alias py python3
 alias readme "nvim README.md"
