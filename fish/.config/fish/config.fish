@@ -1,6 +1,5 @@
 set fish_greeting ""
 
-set -gx TERM xterm-256color
 set -gx EDITOR nvim
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
