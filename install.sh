@@ -27,7 +27,7 @@ workspace_dir=$HOME/workspace
 action "Install packages by pacman"
 sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    ranger tmux qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
+    tmux qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
     swaybg --noconfirm
 ok "ending..."
@@ -50,26 +50,28 @@ if [[ ! -d $dotfile_dir ]]; then
     mkdir $dotfile_dir
 fi
 
-action "Install yay"
+action "Install paru"
 cd $dotfile_dir
 stow profile
 cd $HOME
-git clone https://aur.archlinux.org/yay.git
-cd $HOME/yay
+git clone https://aur.archlinux.org/paru.git
+cd $HOME/paru
 makepkg -si
 ok "ending..."
 
-action "Install packages by yay"
-yay -Syu
-yay -S hyprland cava rustup \
+action "Install packages by paru"
+paru
+paru -S hyprland cava rustup \
     swaylock-effects-git wlogout \
     xdg-desktop-portal-hyprland \
     keyd yazi-git --noconfirm
 ok "ending..."
 
 action "Install hypr-empty"
-cargo install --git https://github.com/aklk1ng/hypr-empty.git
-ok "ending..."
+if command -v cargo &>/dev/null; then
+    cargo install --git https://github.com/aklk1ng/hypr-empty.git
+fi
+"ending..."
 
 cd $dotfile_dir
 
