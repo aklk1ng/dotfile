@@ -28,7 +28,7 @@ action "Install packages by pacman"
 sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     tmux qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
-    network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi glow \
+    network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi mdcat \
     swaybg --noconfirm
 ok "ending..."
 bat cache --build
