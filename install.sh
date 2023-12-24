@@ -100,7 +100,7 @@ sudo fc-cache -v
 ok "ending..."
 
 action "save fish theme"
-fish_config theme save Base16\ Default\ Dark
+fish_config theme save aklk1ng
 sudo chsh -s $(which fish)
 ok "ending..."
 
@@ -116,8 +116,16 @@ git clone https://github.com/aklk1ng/wallpaper.git --depth 1
 git clone https://github.com/aklk1ng/keyd.git --depth 1
 ok "ending..."
 
-action "start keyd"
-sudo cp keyd/default.conf /etc/keyd/
+action "config keyd"
+if [[ ! -d /etc/keyd ]]; then
+    sudo mkdir /etc/keyd
+fi
+if [[ ! -e /etc/keyd/default.conf ]]; then
+    sudo touch /etc/keyd/default.conf
+fi
+sudo cat keyd/default.conf > /etc/keyd/default.conf
 systemctl enable keyd.service
 systemctl start keyd.service
+action "clean repo"
+rm -rf keyd
 ok "ending..."
