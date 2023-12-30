@@ -51,7 +51,7 @@ alias gpo "git push origin"
 alias gd "git diff"
 alias gf "git fetch"
 
-alias yayq="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
+alias paruq="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro yay -Rns"
 
 alias gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
 alias npmconfig "npm config set proxy=http://127.0.0.1:7890"
