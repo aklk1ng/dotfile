@@ -32,7 +32,7 @@ keymap = [
   ], exec = "leave" },
   { on = [
     "l",
-  ], exec = "enter" },
+  ], exec = "plugin --sync smart-enter" },
 
   { on = [
     "H",
