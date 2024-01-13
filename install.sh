@@ -25,11 +25,12 @@ cache_dir=$HOME/.cache
 workspace_dir=$HOME/workspace
 
 action "Install packages by pacman"
-sudo pacman -S git dunst unzip lxappearance ninja curl xfce4-settings grim zoxide tree-sitter \
+sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter \
     python-requests slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     tmux qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi mdcat \
-    swaybg --noconfirm
+    fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
+    swaybg qt5 --noconfirm
 ok "ending..."
 bat cache --build
 
@@ -50,18 +51,33 @@ if [[ ! -d $dotfile_dir ]]; then
     mkdir $dotfile_dir
 fi
 
-action "Install paru"
+action "linking config files"
+if [[ ! -d $config_dir ]]; then
+    mkdir $config_dir -p
+fi
 cd $dotfile_dir
-stow profile
+for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
+    if [[ $file != "FiraCode" ]] && [[ $file != "vim" ]]; then
+        stow $file
+    fi
+done
+ok "ending..."
+
+action "Install paru"
 cd $HOME
 git clone https://aur.archlinux.org/paru.git
 cd $HOME/paru
 makepkg -si
 ok "ending..."
 
+action "Install rust"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+ok "ending..."
+
 action "Install packages by paru"
 paru
-paru -S hyprland cava rustup \
+paru -S fcitx5-skin-fluentdark-git hyprland cava rustup \
+    whitesur-gtk-theme whitesur-icon-theme whitesur-cursor-theme-git \
     swaylock-effects-git wlogout \
     xdg-desktop-portal-hyprland \
     keyd yazi-git --noconfirm
@@ -71,15 +87,6 @@ action "Install hypr-empty"
 if command -v cargo &>/dev/null; then
     cargo install --git https://github.com/aklk1ng/hypr-empty.git
 fi
-"ending..."
-
-cd $dotfile_dir
-
-action "linking dotfiles"
-if [[ ! -d $config_dir ]]; then
-    mkdir $config_dir
-fi
-stow chrome-flags fish dunst kitty mpd ncmpcpp yazi wofi tmux hypr swaylock waybar cava bat gtk3 hypr-empty
 ok "ending..."
 
 action "config mpd"
@@ -100,8 +107,8 @@ sudo fc-cache -v
 ok "ending..."
 
 action "save fish theme"
-fish_config theme save aklk1ng
 sudo chsh -s $(which fish)
+fish_config theme save aklk1ng
 ok "ending..."
 
 action "start mpd service"
@@ -123,7 +130,7 @@ fi
 if [[ ! -e /etc/keyd/default.conf ]]; then
     sudo touch /etc/keyd/default.conf
 fi
-sudo cat keyd/default.conf > /etc/keyd/default.conf
+sudo cat keyd/default.conf >/etc/keyd/default.conf
 systemctl enable keyd.service
 systemctl start keyd.service
 action "clean repo"
