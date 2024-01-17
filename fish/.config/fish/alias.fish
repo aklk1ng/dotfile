@@ -55,4 +55,4 @@ alias paruq="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro yay -Rn
 
 alias gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
 alias npmconfig "npm config set proxy=http://127.0.0.1:7890"
-alias setproxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5:://127.0.0.1:7890"
+alias setproxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 ALL_PROXY=socks5:://127.0.0.1:7890"
