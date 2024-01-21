@@ -1,5 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
-    set_color C2BD9F
+    set_color A09C87
     echo -n (prompt_pwd)
     set_color normal
 
@@ -30,7 +30,7 @@ function fish_prompt --description 'Write out the prompt'
     set -q __fish_git_prompt_color_branch
     or set -g __fish_git_prompt_color_branch magenta
     set -q __fish_git_prompt_char_stateseparator
-    or set -g __fish_git_prompt_char_stateseparator '⚡'
+    or set -g __fish_git_prompt_char_stateseparator ''
     fish_vcs_prompt '|%s'
     echo
 
