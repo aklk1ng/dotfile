@@ -11,12 +11,14 @@ set -gx PATH $GOPATH/bin $PATH
 
 set -gx FZF_DEFAULT_OPTS "--reverse --preview 'bat --color=always {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down -m"
 
-# alias commands
 source ~/.config/fish/alias.fish
 
-# run command every login
 if status is-interactive
     setproxy
+    set fish_cursor_default block
+    set fish_cursor_insert line
+    set fish_cursor_replace_one underscore
+    set fish_cursor_visual block
 end
 
 function fish_mode_prompt
