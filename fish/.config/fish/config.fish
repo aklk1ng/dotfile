@@ -9,7 +9,7 @@ set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
-set -gx FZF_DEFAULT_OPTS "--reverse --preview 'bat --color=always {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down -m"
+set -gx FZF_DEFAULT_OPTS "--color 16 --reverse --preview 'bat --color=always {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down -m"
 
 source ~/.config/fish/alias.fish
 
