@@ -21,7 +21,14 @@
     ],
     "clock": {
       "tooltip-format": "{calendar}",
-      "format": "{:%R %A %b %d}"
+      "format": "{:%R %A %b %d}",
+      "calendar": {
+        "format": {
+          "months":     "<span color='#ffead3'><b>{}</b></span>",
+          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+          "today":      "<span color='#89b4ff'><b>{}</b></span>"
+        }
+      }
     },
     "custom/icon": {
       "format": " ",
