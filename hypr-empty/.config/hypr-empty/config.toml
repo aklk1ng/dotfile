@@ -19,6 +19,6 @@ command = "code"
 args = []
 
 [[components]]
-workspace = "14"
+workspace = "4"
 command = "linuxqq"
 args = []
