@@ -43,6 +43,7 @@ alias g git
 alias ga "git add"
 alias gaa "git add ."
 alias gb "git branch"
+alias gc "git checkout"
 alias gbm "git branch -M"
 alias gs "git status"
 alias gcm "git commit -m"
