@@ -12,7 +12,6 @@ family = "FiraCode Nerd Font"
 style = "SemiBold"
 
 [window]
-dynamic_padding = true
 padding = { x = 0, y = 0 }
 decorations = "None"
 
@@ -20,8 +19,8 @@ decorations = "None"
 hide_when_typing = true
 
 [cursor]
-style = { shape = "Beam", blinking = "Off" }
-vi_mode_style = { shape = "Block", blinking = "Off" }
+style = { shape = "Beam", blinking = "Never" }
+vi_mode_style = { shape = "Block", blinking = "Never" }
 
 [keyboard]
 bindings = [
@@ -34,7 +33,7 @@ background = "#151521"
 foreground = "#959a96"
 
 [colors]
-cursor = { cursor = '#6a6a6a' }
+cursor = { cursor = '#6a6a6a', text = '#151521' }
 
 [colors.normal]
 black = "#282a36"
