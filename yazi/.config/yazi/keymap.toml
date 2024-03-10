@@ -5,11 +5,11 @@
 prepend_keymap = [
   { on = [
     "l",
-  ], exec = "plugin --sync smart-enter" },
+  ], run = "plugin --sync smart-enter" },
   { on = [
     "<C-s>",
-  ], exec = '''shell "$SHELL" --block --confirm''' },
+  ], run = '''shell "$SHELL" --block --confirm''' },
   { on = [
     "<C-g>",
-  ], exec = "shell lazygit --block --confirm" },
+  ], run = "shell lazygit --block --confirm" },
 ]
