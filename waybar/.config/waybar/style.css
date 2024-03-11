@@ -46,7 +46,6 @@ window > box {
 #cpu,
 #battery,
 #pulseaudio,
-#bluetooth,
 #tray,
 #backlight {
   padding: 0px 10px;
@@ -68,10 +67,6 @@ window > box {
 #clock {
   color: #fab39f;
   margin-left: 10px;
-}
-
-#bluetooth {
-  color: #89b4ff;
 }
 
 #pulseaudio {
