@@ -78,9 +78,13 @@ action "Install packages by paru"
 paru
 paru -S fcitx5-skin-fluentdark-git hyprland cava rustup \
     whitesur-gtk-theme whitesur-icon-theme whitesur-cursor-theme-git \
-    swaylock-effects-git wlogout \
+    swaylock-effects-git rofi-power-menu wlogout \
     xdg-desktop-portal-hyprland \
     keyd yazi-git --noconfirm
+if [ $XDG_SESSION_TYPE == "wayland" ]; then
+    paru -S rofi-lbonn-wayland-git --noconfirm
+fi
+
 ok "ending..."
 
 action "Install hypr-empty"
