@@ -1,9 +1,8 @@
 #! /bin/bash
 
 call_ncmpcpp() {
-    pid1=$(ps aux | grep 'kitty -T music' | grep -v grep | awk '{print $2}')
-    pid2=$(ps aux | grep 'kitty -T music_ncmpcpp' | grep -v grep | awk '{print $2}')
-    kill $pid1 && kill $pid2 || kitty -T music_ncmpcpp --class floating -e ncmpcpp
+    pid=$(ps aux | grep 'kitty -T ncmpcpp' | grep -v grep | awk '{print $2}')
+    kill $pid || kitty -T ncmpcpp --class floating -e ncmpcpp
 }
 
 case "$1" in
