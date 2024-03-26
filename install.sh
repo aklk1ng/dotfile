@@ -42,19 +42,27 @@ git config --global core.ui true
 git config --global http.postBuffer 5242880
 git config --global https.postBuffer 5242880
 
+action "create neccessary directory"
+if [[ ! -d $dotfile_dir ]]; then
+    mkdir $dotfile_dir -p
+fi
+if [[ ! -d $workspace_dir ]]; then
+    mkdir $workspace_dir -p
+fi
+if [[ ! -d $config_dir ]]; then
+    mkdir $config_dir -p
+fi
+if [[ ! -d $cache_dir ]]; then
+    mkdir $cache_dir -p
+fi
+ok "ending..."
+
 action "clone neovim config"
 git clone https://github.com/aklk1ng/whiskyline.nvim --depth 1 $workspace_dir
 git clone https://github.com/aklk1ng/nvim $HOME/.config/nvim
 ok "ending..."
 
-if [[ ! -d $dotfile_dir ]]; then
-    mkdir $dotfile_dir
-fi
-
 action "linking config files"
-if [[ ! -d $config_dir ]]; then
-    mkdir $config_dir -p
-fi
 cd $dotfile_dir
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
     if [[ $file != "FiraCode" ]] && [[ $file != "vim" ]]; then
@@ -76,15 +84,11 @@ ok "ending..."
 
 action "Install packages by paru"
 paru
-paru -S fcitx5-skin-fluentdark-git hyprland cava rustup \
+paru -S fcitx5-skin-fluentdark-git hyprland cava \
     whitesur-gtk-theme whitesur-icon-theme whitesur-cursor-theme-git \
-    swaylock-effects-git rofi-power-menu wlogout \
+    swaylock-effects-git rofi-lbonn-wayland-git wlogout \
     xdg-desktop-portal-hyprland \
     keyd yazi-git --noconfirm
-if [ $XDG_SESSION_TYPE == "wayland" ]; then
-    paru -S rofi-lbonn-wayland-git --noconfirm
-fi
-
 ok "ending..."
 
 action "Install hypr-empty"
@@ -94,9 +98,6 @@ fi
 ok "ending..."
 
 action "config mpd"
-if [[ ! -d $cache_dir ]]; then
-    mkdir $cache_dir
-fi
 touch $cache_dir/log
 touch $cache_dir/database
 touch $config_fir/mpd/pid
