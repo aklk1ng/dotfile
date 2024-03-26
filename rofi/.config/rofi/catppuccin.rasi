@@ -2,10 +2,9 @@
     bg-col:  #1E1D2F;
     bg-col-light: #1E1D2F;
     border-col: #796174;
-    selected-col: #1E1D2F;
+    selected-col: #454b50;
     blue: #7AA2F7;
     fg-col: #CCCCCC;
-    fg-col2: #F28FAD;
     grey: #808080;
     width: 600;
 }

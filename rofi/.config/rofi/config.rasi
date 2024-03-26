@@ -11,8 +11,6 @@ configuration{
     hide-scrollbar: true;
     display-drun: "   Apps ";
     display-run: "   Run ";
-    display-window: " 﩯  window";
-    display-Network: " 󰤨  Network";
     sidebar-mode: true;
 }
 
@@ -84,7 +82,6 @@ element-icon {
 
 element selected {
     background-color:  @selected-col ;
-    text-color: @fg-col2  ;
 }
 
 mode-switcher {
