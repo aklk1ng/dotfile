@@ -28,7 +28,7 @@ action "Install packages by pacman"
 sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter \
     python python-requests watchexec slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     tmux qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bat ripgrep cmake fzf lolcat npm yarn yt-dlp \
-    network-manager-applet kitty lazygit wl-clipboard mupdf eza wofi mdcat \
+    network-manager-applet kitty lazygit wl-clipboard mupdf eza mdcat \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     swaybg qt5 --noconfirm
 ok "ending..."
