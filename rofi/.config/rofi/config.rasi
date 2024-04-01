@@ -1,5 +1,5 @@
 configuration{
-    modi: "drun,run";
+    modi: "drun";
     lines: 12;
     font: "FiraCode Nerd Font 20";
     show-icons: true;
@@ -10,7 +10,6 @@ configuration{
     disable-history: false;
     hide-scrollbar: true;
     display-drun: "   Apps ";
-    display-run: "   Run ";
     sidebar-mode: true;
 }
 
@@ -24,8 +23,6 @@ element-text, element-icon , mode-switcher {
 window {
     width: 1200px;
     height: 800px;
-    border: 5px;
-    border-color: @border-col;
     background-color: @bg-col;
 }
 
