@@ -7,5 +7,11 @@ function fish_user_key_bindings
         bind -M $mode \cf forward-char
     end
 
-    bind -M insert \co __fzf_open
+    for mode in insert default
+        bind -M $mode \co fzf-open
+        bind -M $mode \cr fzf-history
+        bind -M $mode \cn fzf-file
+        bind -M $mode \cg fzf-git-status
+        bind -M $mode \ck fzf-directory
+    end
 end

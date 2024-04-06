@@ -1,4 +1,4 @@
-function __fzf_open -d "Open files and directories."
+function fzf-open -d "Open files and directories."
     function __fzf_open_get_open_cmd -d "Find appropriate open command."
         if type -q xdg-open
             echo xdg-open
