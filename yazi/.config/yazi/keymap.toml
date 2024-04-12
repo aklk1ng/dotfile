@@ -13,9 +13,6 @@ prepend_keymap = [
     "<C-g>",
   ], run = "shell lazygit --block --confirm" },
   { on = [
-    "F",
-  ], run = "jump fzf", desc = "Jump to a directory, or reveal a file using fzf" },
-  { on = [
     "?",
   ], run = "help", desc = "Open help" },
 ]
