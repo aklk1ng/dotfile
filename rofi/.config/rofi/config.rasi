@@ -17,7 +17,7 @@ configuration{
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
-    text-color:       inherit;
+    text-color:       @fg-col;
 }
 
 window {
@@ -78,7 +78,7 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected-col ;
+    background-color:  @selected-col;
 }
 
 mode-switcher {
