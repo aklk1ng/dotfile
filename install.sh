@@ -65,7 +65,7 @@ ok "ending..."
 action "linking config files"
 cd $dotfile_dir
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ $file != "FiraCode" ]] && [[ $file != "vim" ]]; then
+    if [[ $file != "FiraCode" ]] && [[ $file != "vim" ]] && [[ $file != "keyd" ]]; then
         stow $file
     fi
 done
@@ -120,22 +120,21 @@ action "start mpd service"
 systemctl start mpd.service --user
 ok "ending..."
 
-cd $HOME
 action "clone repos"
+cd $HOME
 git clone https://github.com/aklk1ng/yt-dlp.git --depth 1
 git clone https://github.com/aklk1ng/scripts.git --depth 1
 git clone https://github.com/aklk1ng/wallpaper.git --depth 1
-git clone https://github.com/aklk1ng/keyd.git --depth 1
 ok "ending..."
 
 action "config keyd"
+cd $dotfile
 if [[ ! -d /etc/keyd ]]; then
     sudo mkdir /etc/keyd
 fi
 if [[ ! -e /etc/keyd/default.conf ]]; then
-    sudo touch /etc/keyd/default.conf
+    sudo cp $dotfile/keyd/default.conf /etc/keyd/default.conf
 fi
-sudo cat keyd/default.conf >/etc/keyd/default.conf
 systemctl enable keyd.service
 systemctl start keyd.service
 action "clean repo"
