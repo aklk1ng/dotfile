@@ -91,12 +91,6 @@ paru -S fcitx5-skin-fluentdark-git hyprland \
     keyd yazi-git --noconfirm
 ok "ending..."
 
-action "Install hypr-empty"
-if command -v cargo &>/dev/null; then
-    cargo install --git https://github.com/aklk1ng/hypr-empty.git
-fi
-ok "ending..."
-
 action "config mpd"
 touch $cache_dir/log
 touch $cache_dir/database
