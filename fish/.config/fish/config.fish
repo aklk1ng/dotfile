@@ -1,17 +1,7 @@
 set fish_greeting ""
 
-set -gx EDITOR nvim
-set -gx PATH ~/.local/bin $PATH
-set -gx PATH ~/.cargo/bin $PATH
-set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
-set -gx HOMEBREW_NO_AUTO_UPDATE 1
-# Go
-set -g GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
-
-set -gx FZF_DEFAULT_OPTS "--color 16 --reverse --preview 'bat --color=always {}' --bind ctrl-u:half-page-up,ctrl-d:half-page-down -m"
-
-source ~/.config/fish/alias.fish
+source $HOME/.config/fish/alias.fish
+source $HOME/.config/fish/env.fish
 
 if status is-interactive
     setproxy

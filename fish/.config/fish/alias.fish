@@ -2,19 +2,15 @@ alias ls "ls --color=auto"
 alias la "ls -A"
 alias ll "eza -l --icons"
 alias lla "ll -A"
-alias f "fzf --reverse --preview 'bat {}' --bind ctrl-u:preview-page-up,ctrl-d:preview-page-down | xargs -n 1 nvim"
 alias n fastfetch
 alias t "tmux new-session -s dev"
 alias ki "nvim ~/.config/kitty/kitty.conf"
 alias py python3
 alias readme "nvim README.md"
 alias lg lazygit
-
-alias H Hyprland
-
 alias j yazi
 
-alias reload "source ~/.config/fish/config.fish"
+alias H Hyprland
 
 alias c cargo
 alias cn "cargo new"
@@ -41,7 +37,6 @@ alias dl "docker logs"
 
 alias g git
 alias ga "git add"
-alias gaa "git add ."
 alias gb "git branch"
 alias gc "git checkout"
 alias gbm "git branch -M"
