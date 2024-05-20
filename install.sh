@@ -84,7 +84,7 @@ ok "ending..."
 
 action "Install packages by paru"
 paru
-paru -S fcitx5-skin-fluentdark-git hyprland \
+paru -S fcitx5-skin-fluentdark-git cava hyprland \
     whitesur-gtk-theme whitesur-icon-theme whitesur-cursor-theme-git \
     swaylock-effects-git rofi-lbonn-wayland-git wlogout \
     xdg-desktop-portal-hyprland \
