@@ -1,54 +1,53 @@
-alias ls "ls --color=auto"
-alias la "ls -A"
-alias ll "eza -l --icons"
-alias lla "ll -A"
-alias n fastfetch
-alias t "tmux new-session -s dev"
-alias ki "nvim ~/.config/kitty/kitty.conf"
-alias py python3
-alias readme "nvim README.md"
-alias lg lazygit
-alias j yazi
+abbr --add ls ls --color=auto
+abbr --add la ls -A
+abbr --add ll eza -l --icons
+abbr --add lla ll -A
+abbr --add n fastfetch
+abbr --add t tmux new-session -s dev
+abbr --add ki nvim ~/.config/kitty/kitty.conf
+abbr --add py python3
+abbr --add readme nvim README.md
+abbr --add lg lazygit
+abbr --add j yazi
 
-alias H Hyprland
+abbr --add H Hyprland
 
-alias c cargo
-alias cn "cargo new"
-alias ca "cargo add"
-alias cb "cargo build"
-alias cr "cargo run"
-alias crb "cargo run --bin"
-alias ct "cargo test"
-alias ci "cargo install"
-alias cc "cargo clean"
+abbr --add c cargo
+abbr --add cn cargo new
+abbr --add ca cargo add
+abbr --add cb cargo build
+abbr --add cr cargo run
+abbr --add crb cargo run --bin
+abbr --add ct cargo test
+abbr --add ci cargo install
+abbr --add cc cargo clean
 
-alias zr "zig run"
-alias zt "zig test"
-alias zb "zig build"
-alias zl "zig init-lib"
-alias ze "zig init-exe"
+abbr --add zr zig run
+abbr --add zt zig test
+abbr --add zb zig build
+abbr --add zl zig init-lib
+abbr --add ze zig init-exe
 
-alias di "docker images"
-alias dp "docker pull"
-alias dP "docker push"
-alias dr "docker run"
-alias ds "docker stats"
-alias dl "docker logs"
+abbr --add di docker images
+abbr --add dp docker pull
+abbr --add dP docker push
+abbr --add dr docker run
+abbr --add ds docker stats
+abbr --add dl docker logs
 
-alias g git
-alias ga "git add"
-alias gb "git branch"
-alias gc "git checkout"
-alias gbm "git branch -M"
-alias gs "git status"
-alias gcm "git commit -m"
-alias gp "git pull"
-alias gpo "git push origin"
-alias gd "git diff"
-alias gf "git fetch"
+abbr --add g git
+abbr --add ga git add
+abbr --add gb git branch
+abbr --add gc git checkout
+abbr --add gbm git branch -M
+abbr --add gs git status
+abbr --add gcm git commit -m
+abbr --add gp git pull
+abbr --add gpo git push origin
+abbr --add gd git diff
+abbr --add gf git fetch
 
-alias paruq="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro yay -Rns"
+abbr --add paruq "paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro yay -Rns"
 
-alias gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
-alias npmconfig "npm config set proxy=http://127.0.0.1:7890"
-alias setproxy "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 ALL_PROXY=socks5:://127.0.0.1:7890"
+abbr --add gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
+abbr --add npmconfig "npm config set proxy=http://127.0.0.1:7890"
