@@ -12,6 +12,8 @@ abbr --add j yazi
 
 abbr --add H Hyprland
 
+abbr --add wa watchexec
+
 abbr --add c cargo
 abbr --add cn cargo new
 abbr --add ca cargo add
