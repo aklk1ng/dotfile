@@ -65,7 +65,7 @@ ok "ending..."
 action "linking config files"
 cd $dotfile_dir
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ $file != "FiraCode" ]] && [[ $file != "vim" ]] && [[ $file != "keyd" ]]; then
+    if [[ $file != "fonts" ]] && [[ $file != "vim" ]] && [[ $file != "keyd" ]]; then
         stow $file
     fi
 done
@@ -101,7 +101,7 @@ mkdir $config_fir/mpd/playlists
 ok "ending..."
 
 action "copy fonts"
-sudo cp $dotfile_dir/FiraCode -r /usr/share/fonts/
+sudo cp $dotfile_dir/fonts -r /usr/share/fonts/
 sudo fc-cache -v
 ok "ending..."
 
