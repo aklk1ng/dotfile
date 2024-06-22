@@ -41,6 +41,7 @@ git config --global core.editor "nvim"
 git config --global core.ui true
 git config --global http.postBuffer 5242880
 git config --global https.postBuffer 5242880
+git config --global init.defaultBranch 'main'
 
 action "create neccessary directory"
 if [[ ! -d $dotfile_dir ]]; then
