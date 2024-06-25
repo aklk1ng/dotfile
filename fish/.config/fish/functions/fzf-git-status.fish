@@ -2,13 +2,21 @@ function fzf-git-status
     if not git rev-parse --git-dir >/dev/null 2>&1
         echo 'fzf-git-status: Not in a git repository.' >&2
     else
+        set -f preview_cmd '__fzf_preview_changed_file {}'
+        if set --query fzf_diff_highlighter
+            set preview_cmd "$preview_cmd | $fzf_diff_highlighter"
+        end
+
         set -f selected_paths (
+            # Pass configuration color.status=always to force status to use colors even though output is sent to a pipe
             git -c color.status=always status --short |
-            eval (__fzfcmd) --ansi \
+            __fzf_wrapper --ansi \
                 --multi \
+                --query=(commandline --current-token) \
+                --preview=$preview_cmd \
                 --nth="2.." \
-                --no-preview
-            )
+                $fzf_git_status_opts
+        )
         if test $status -eq 0
             # git status --short automatically escapes the paths of most files for us so not going to bother trying to handle
             # the few edges cases of weird file names that should be extremely rare (e.g. "this;needs;escaping")
@@ -27,5 +35,6 @@ function fzf-git-status
             commandline --current-token --replace -- (string join ' ' $cleaned_paths)
         end
     end
+
     commandline --function repaint
 end
