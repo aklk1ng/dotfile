@@ -40,10 +40,12 @@ abbr --add dl docker logs
 abbr --add g git
 abbr --add ga git add
 abbr --add gb git branch
+abbr --add gt git tag
 abbr --add gc git checkout
 abbr --add gbm git branch -M
 abbr --add gs git status
 abbr --add gcm git commit -m
+abbr --add gcam git commit --amend -m
 abbr --add gp git pull
 abbr --add gpo git push origin
 abbr --add gd git diff
