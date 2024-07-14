@@ -10,8 +10,6 @@ abbr --add readme nvim README.md
 abbr --add lg lazygit
 abbr --add j yazi
 
-abbr --add H Hyprland
-
 abbr --add wa watchexec
 
 abbr --add c cargo
