@@ -1,7 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
-    set_color a09c87
     echo -n (prompt_pwd)
-    set_color normal
 
     set -q __fish_git_prompt_showdirtystate
     or set -g __fish_git_prompt_showdirtystate 1
@@ -35,5 +33,4 @@ function fish_prompt --description 'Write out the prompt'
     echo
 
     echo -n '$ '
-    set_color normal
 end
