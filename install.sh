@@ -66,7 +66,7 @@ ok "ending..."
 action "linking config files"
 cd $dotfile_dir
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ $file != "fonts" ]] && [[ $file != "vim" ]] && [[ $file != "keyd" ]]; then
+    if [[ $file != "fonts" ]] && [[ $file != "keyd" ]]; then
         stow $file
     fi
 done
