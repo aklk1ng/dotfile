@@ -5,6 +5,7 @@ set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
+set -gx PATH $HOME/.rye/shims $PATH
 
 set -gx MANPAGER "nvim +Man!"
 
