@@ -49,7 +49,7 @@ abbr --add gpo git push origin
 abbr --add gd git diff
 abbr --add gf git fetch
 
-abbr --add paruq "paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro yay -Rns"
+abbr --add parur "paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro paru -Rns"
 
 abbr --add gitconfig "git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy http://127.0.0.1:7890"
 abbr --add npmconfig "npm config set proxy=http://127.0.0.1:7890"
