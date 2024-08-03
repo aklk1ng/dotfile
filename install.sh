@@ -27,7 +27,7 @@ workspace_dir=$HOME/workspace
 action "Install packages by pacman"
 sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter \
     python python-requests watchexec slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    tmux qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bat ripgrep fd cmake fzf lolcat npm yarn yt-dlp \
+    tmux keyd qt5-wayland qt6-wayland waybar fastfetch lua bat ripgrep fd cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     swaybg qt5 --noconfirm
@@ -66,7 +66,7 @@ ok "ending..."
 action "linking config files"
 cd $dotfile_dir
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ $file != "fonts" ]] && [[ $file != "keyd" ]]; then
+    if [[ $file != "fonts" ]] && [[ $file != "keyd" ]] && [[ $file != "kanata" ]]; then
         stow $file
     fi
 done
@@ -89,7 +89,7 @@ paru -S fcitx5-skin-fluentdark-git cava hyprland \
     whitesur-gtk-theme whitesur-icon-theme whitesur-cursor-theme-git \
     swaylock-effects-git rofi-lbonn-wayland-git wlogout \
     xdg-desktop-portal-hyprland \
-    keyd yazi-git --noconfirm
+    yazi-git --noconfirm
 ok "ending..."
 
 action "config mpd"
@@ -127,11 +127,7 @@ cd $dotfile
 if [[ ! -d /etc/keyd ]]; then
     sudo mkdir /etc/keyd
 fi
-if [[ ! -e /etc/keyd/default.conf ]]; then
-    sudo cp $dotfile/keyd/default.conf /etc/keyd/default.conf
-fi
+sudo cp $dotfile/keyd/default.conf /etc/keyd/default.conf
 systemctl enable keyd.service
 systemctl start keyd.service
-action "clean repo"
-rm -rf keyd
 ok "ending..."

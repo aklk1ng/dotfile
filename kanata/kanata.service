@@ -1,0 +1,10 @@
+[Unit]
+Description=kanata
+
+[Service]
+Type=simple
+ExecStart=kanata -c /etc/kanata/kanata.kbd
+Restart=no
+
+[Install]
+WantedBy=sysinit.target
