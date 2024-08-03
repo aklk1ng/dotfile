@@ -32,5 +32,7 @@ function fish_prompt --description 'Write out the prompt'
     fish_vcs_prompt '|%s'
     echo
 
+    set_color cyan
     echo -n '$ '
+    set_color normal
 end
