@@ -1,4 +1,4 @@
-function grsu
+function grsu --description "Convert the repo remote url"
     set cnt $(count $argv)
     if test $cnt -ne 1 -a $cnt -ne 2
         echo "Usage: grsu [g] repo_name"

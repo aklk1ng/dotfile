@@ -1,4 +1,4 @@
-function ta
+function ta --description "Convert a audio file extension with ffmpeg"
     set cnt (count $argv)
     if test $cnt -ne 2
         echo "Usage: ta input_file output_extension"

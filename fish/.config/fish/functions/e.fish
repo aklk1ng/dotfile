@@ -1,4 +1,4 @@
-function e
+function e --description "Smartly extract file"
     set ext zip rar bz2 gz tar tbz2 tgz Z 7z xz exe tar.bz2 tar.gz tar.xz lzma
     if test -z "$argv"
         # display usage if no parameters given

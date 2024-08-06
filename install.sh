@@ -106,9 +106,8 @@ sudo cp $dotfile_dir/fonts -r /usr/share/fonts/
 sudo fc-cache -v
 ok "ending..."
 
-action "save fish theme"
+action "use fish shell"
 sudo chsh -s $(which fish)
-fish_config theme save aklk1ng
 ok "ending..."
 
 action "start mpd service"

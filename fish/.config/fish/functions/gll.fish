@@ -1,4 +1,4 @@
-function gll
+function gll --description "Show git log with graph with current branch"
     if string length -q -- $argv[1]
         git --no-pager log --date=format:'%Y-%m-%d %H:%M' --pretty=format:"%C(magenta)%h %C(yellow)%cd %C(blue)%cn: %C(cyan)%s %C(red)%d%Creset" --graph -n $argv[1]
     else
