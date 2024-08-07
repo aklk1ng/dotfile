@@ -26,7 +26,7 @@ workspace_dir=$HOME/workspace
 
 action "Install packages by pacman"
 sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter \
-    python python-requests watchexec slurp swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
+    python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
     tmux keyd qt5-wayland qt6-wayland waybar fastfetch lua bat ripgrep fd cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
