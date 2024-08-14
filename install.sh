@@ -25,9 +25,10 @@ cache_dir=$HOME/.cache
 workspace_dir=$HOME/workspace
 
 action "Install packages by pacman"
-sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter \
+sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter clang \
+    tmux keyd qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
+    bat ripgrep fd cmake fzf lolcat npm yarn yt-dlp zig zls python-pip pyright \
     python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
-    tmux keyd qt5-wayland qt6-wayland waybar fastfetch lua bat ripgrep fd cmake fzf lolcat npm yarn yt-dlp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     swaybg qt5 --noconfirm
@@ -59,7 +60,6 @@ fi
 ok "ending..."
 
 action "clone neovim config"
-git clone https://github.com/aklk1ng/whiskyline.nvim --depth 1 $workspace_dir
 git clone https://github.com/aklk1ng/nvim $HOME/.config/nvim
 ok "ending..."
 
