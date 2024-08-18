@@ -25,7 +25,7 @@ cache_dir=$HOME/.cache
 workspace_dir=$HOME/workspace
 
 action "Install packages by pacman"
-sudo pacman -S git dunst unzip ninja curl grim zoxide tree-sitter clang \
+sudo pacman -S stow git dunst unzip ninja curl grim zoxide tree-sitter clang \
     tmux keyd qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake fzf lolcat npm yarn yt-dlp python-pip pyright \
     python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpc ncmpcpp \
@@ -66,27 +66,25 @@ ok "ending..."
 action "linking config files"
 cd $dotfile_dir
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ $file != "fonts" ]] && [[ $file != "keyd" ]] && [[ $file != "kanata" ]]; then
+    if [[ $file != "fonts" ]] && [[ $file != "keyd" ]] && [[ $file != "kanata" ]] && [[ $file != ".git" ]]; then
         stow $file
     fi
 done
-ok "ending..."
-
-action "Install paru"
-cd $HOME
-git clone https://aur.archlinux.org/paru.git
-cd $HOME/paru
-makepkg -si
 ok "ending..."
 
 action "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ok "ending..."
 
+action "Install paru"
+git clone https://aur.archlinux.org/paru.git $HOME/paru
+cd $HOME/paru
+makepkg -si
+ok "ending..."
+
 action "Install packages by paru"
 paru
-paru -S fcitx5-skin-fluentdark-git cava hyprland \
-    whitesur-gtk-theme whitesur-icon-theme whitesur-cursor-theme-git \
+paru -S fcitx5-skin-fluentdark-git hyprland \
     swaylock-effects-git rofi-lbonn-wayland-git wlogout \
     xdg-desktop-portal-hyprland \
     yazi-git --noconfirm
@@ -102,15 +100,17 @@ mkdir $config_fir/mpd/playlists
 ok "ending..."
 
 action "copy fonts"
-sudo cp $dotfile_dir/fonts -r /usr/share/fonts/
+sudo cp $dotfile_dir/fonts/* -r /usr/share/fonts/
 sudo fc-cache -v
 ok "ending..."
 
 action "use fish shell"
+chsh -s $(which fish)
 sudo chsh -s $(which fish)
 ok "ending..."
 
 action "start mpd service"
+systemctl enable mpd.service --user
 systemctl start mpd.service --user
 ok "ending..."
 
@@ -122,11 +122,10 @@ git clone https://github.com/aklk1ng/wallpaper.git --depth 1
 ok "ending..."
 
 action "config keyd"
-cd $dotfile
 if [[ ! -d /etc/keyd ]]; then
     sudo mkdir /etc/keyd
 fi
 sudo cp $dotfile/keyd/default.conf /etc/keyd/default.conf
-systemctl enable keyd.service
-systemctl start keyd.service
+sudo systemctl enable keyd.service
+sudo systemctl start keyd.service
 ok "ending..."
