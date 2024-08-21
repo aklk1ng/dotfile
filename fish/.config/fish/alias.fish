@@ -22,12 +22,6 @@ abbr --add ct cargo test
 abbr --add ci cargo install
 abbr --add cc cargo clean
 
-abbr --add zr zig run
-abbr --add zt zig test
-abbr --add zb zig build
-abbr --add zl zig init-lib
-abbr --add ze zig init-exe
-
 abbr --add di docker images
 abbr --add dp docker pull
 abbr --add dP docker push
