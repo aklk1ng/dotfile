@@ -15,7 +15,7 @@ function ok() {
 }
 
 function action() {
-    echo -e "\n$COL_YELLOW[action]$COL_RESET "$1
+    echo -e "\n$COL_BLUE[action]$COL_RESET "$1
 }
 
 function warn() {
