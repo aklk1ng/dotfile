@@ -85,8 +85,8 @@ ok "ending..."
 action "Install packages by paru"
 paru
 paru -S fcitx5-skin-fluentdark-git hyprland \
-    swaylock-effects-git rofi-lbonn-wayland-git wlogout \
-    xdg-desktop-portal-hyprland \
+    swaylock-effects-git clipman rofi-lbonn-wayland-git \
+    wlogout xdg-desktop-portal-hyprland \
     yazi-git --noconfirm
 ok "ending..."
 
