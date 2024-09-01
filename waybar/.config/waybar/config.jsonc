@@ -1,93 +1,90 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 50,
-    "spacing": 0,
-    "margin-top": 0,
-    "margin-left": 10,
-    "margin-right": 10,
-    "modules-left": [
-      "custom/icon",
-      "hyprland/workspaces",
-      "cpu"
-    ],
-    "modules-right": [
-      "pulseaudio",
-      "backlight",
-      "battery",
-      "clock",
-      "tray"
-    ],
-    "clock": {
-      "tooltip-format": "{calendar}",
-      "format": "{:%R %A %b %d}",
-      "calendar": {
-        "format": {
-          "months":     "<span color='#ffead3'><b>{}</b></span>",
-          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-          "today":      "<span color='#89b4ff'><b>{}</b></span>"
-        }
-      }
+  "layer": "top",
+  "position": "top",
+  "height": 50,
+  "spacing": 0,
+  "margin-top": 0,
+  "margin-left": 10,
+  "margin-right": 10,
+  "modules-left": ["custom/icon", "hyprland/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "battery",
+    "clock",
+    "tray",
+  ],
+  "clock": {
+    "tooltip-format": "{calendar}",
+    "format": "{:%R %A %b %d}",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#89b4ff'><b>{}</b></span>",
+      },
     },
-    "custom/icon": {
-      "format": " ",
-      "on-click": "$HOME/.config/waybar/scripts/bg.sh",
-      "tooltip": false
+  },
+  "custom/icon": {
+    "format": " ",
+    "on-click": "$HOME/.config/waybar/scripts/bg.sh",
+    "tooltip": false,
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "on-click": "activate",
+    "sort-by-number": true,
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 2,
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "$HOME/.config/waybar/scripts/vol.sh L",
+    "on-click-middle": "$HOME/.config/waybar/scripts/vol.sh M",
+    "on-click-right": "$HOME/.config/waybar/scripts/vol.sh R",
+    "on-scroll-up": "pamixer -i 1",
+    "on-scroll-down": "pamixer -d 1",
+    "scroll-step": 1,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
     },
-    "hyprland/workspaces": {
-      "format":"{icon}",
-      "all-outputs": true,
-      "on-click": "activate",
-      "sort-by-number":true
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6,
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20,
     },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": true,
-        "interval": 2
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "tooltip": false,
-        "format-muted": " Muted",
-        "on-click": "$HOME/.config/waybar/scripts/vol.sh L",
-        "on-click-middle": "$HOME/.config/waybar/scripts/vol.sh M",
-        "on-click-right": "$HOME/.config/waybar/scripts/vol.sh R",
-        "on-scroll-up": "pamixer -i 1",
-        "on-scroll-down": "pamixer -d 1",
-        "scroll-step": 1,
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        }
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
-        "min-length": 6
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "interval": 5
-    },
-    "tray": {
-        "icon-size": 30,
-        "spacing": 15
-    }
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "interval": 5,
+  },
+  "tray": {
+    "icon-size": 30,
+    "spacing": 15,
+  },
 }

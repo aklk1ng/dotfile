@@ -56,12 +56,11 @@ window > box {
 }
 
 #cpu {
-  color: #89b4ff;
-  margin-left: 10px;
+  color: #cac96f;
 }
 
 #tray {
-  background-color: #9c9c9c;
+  background-color: #999999;
 }
 
 #clock {
