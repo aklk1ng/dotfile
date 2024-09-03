@@ -25,8 +25,8 @@ cache_dir=$HOME/.cache
 workspace_dir=$HOME/workspace
 
 action "Install packages by pacman"
-sudo pacman -S stow git dunst unzip unarchiver ninja curl grim zoxide tree-sitter clang \
-    tmux keyd qt5-wayland qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
+sudo pacman -S stow git dunst chafa viu unzip unarchiver ninja curl grim zoxide tree-sitter clang \
+    tmux keyd qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
     python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpv mpc ncmpcpp \
     network-manager-applet kitty lazygit wl-clipboard mupdf eza glow \
