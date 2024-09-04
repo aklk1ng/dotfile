@@ -8,4 +8,4 @@ set -gx PATH $GOPATH/bin $PATH
 
 set -gx MANPAGER "nvim +Man!"
 
-set -gx FZF_DEFAULT_OPTS "--color 16 --reverse --preview 'bat --color=always {}' --bind ctrl-y:select-all+accept,ctrl-u:half-page-up,ctrl-d:half-page-down,ctrl-h:first,ctrl-l:last -m"
+set -gx FZF_DEFAULT_OPTS "--color 16 --reverse --border=none --preview 'bat --color=always {}' --bind ctrl-y:select-all+accept,ctrl-h:backward-word,ctrl-l:forward-word,ctrl-u:half-page-up,ctrl-d:half-page-down,ctrl-k:first,ctrl-j:last -m"
