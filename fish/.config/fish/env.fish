@@ -5,6 +5,8 @@ set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
+set -gx GO111MODULE on
+set -gx GOPROXY https://goproxy.cn
 
 set -gx MANPAGER "nvim +Man!"
 
