@@ -10,18 +10,18 @@ COL_BLUE=$ESC_SEQ"34;01m"
 COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
-function ok() {
-    echo -e "$COL_GREEN[ok]$COL_RESET "$1
+ok() {
+    echo -e "$COL_GREEN[OK]$COL_RESET "$1
 }
 
-function action() {
-    echo -e "\n$COL_BLUE[action]$COL_RESET "$1
+action() {
+    echo -e "\n$COL_BLUE[ACTION]$COL_RESET "$1
 }
 
-function warn() {
-    echo -e "$COL_YELLOW[warning]$COL_RESET "$1
+warn() {
+    echo -e "$COL_YELLOW[WARNING]$COL_RESET "$1
 }
 
-function error() {
-    echo -e "$COL_RED[error]$COL_RESET "$1
+error() {
+    echo -e "$COL_RED[ERROR]$COL_RESET "$1
 }

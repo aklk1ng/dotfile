@@ -17,12 +17,12 @@ ENV_VARS=(
 for var in "${ENV_VARS[@]}"; do
     echo "$var" | sudo tee -a /etc/environment
 done
-ok "ending..."
+ok "Ending..."
 
-dotfile_dir=$HOME/dotfile
-config_dir=$HOME/.config
-cache_dir=$HOME/.cache
-workspace_dir=$HOME/workspace
+dotfile_dir="$HOME/dotfile"
+config_dir="$HOME/.config"
+cache_dir="$HOME/.cache"
+workspace_dir="$HOME/workspace"
 
 action "Install packages by pacman"
 sudo pacman -S stow git dunst chafa viu unzip unarchiver ninja curl grim zoxide tree-sitter clang \
@@ -32,7 +32,7 @@ sudo pacman -S stow git dunst chafa viu unzip unarchiver ninja curl grim zoxide 
     network-manager-applet kitty lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     swaybg qt5 --noconfirm
-ok "ending..."
+ok "Ending..."
 bat cache --build
 
 # git config
@@ -44,88 +44,87 @@ git config --global http.postBuffer 5242880
 git config --global https.postBuffer 5242880
 git config --global init.defaultBranch 'main'
 
-action "create neccessary directory"
-if [[ ! -d $dotfile_dir ]]; then
-    mkdir $dotfile_dir -p
+action "Create neccessary directory"
+if [[ ! -d "$dotfile_dir" ]]; then
+    mkdir "$dotfile_dir" -p
 fi
-if [[ ! -d $workspace_dir ]]; then
-    mkdir $workspace_dir -p
+if [[ ! -d "$workspace_dir" ]]; then
+    mkdir "$workspace_dir" -p
 fi
-if [[ ! -d $config_dir ]]; then
-    mkdir $config_dir -p
+if [[ ! -d "$config_dir" ]]; then
+    mkdir "$config_dir" -p
 fi
-if [[ ! -d $cache_dir ]]; then
-    mkdir $cache_dir -p
+if [[ ! -d "$cache_dir" ]]; then
+    mkdir "$cache_dir" -p
 fi
-ok "ending..."
+ok "Ending..."
 
-action "clone neovim config"
-git clone https://github.com/aklk1ng/nvim $HOME/.config/nvim
-ok "ending..."
+action "Clone neovim config"
+git clone https://github.com/aklk1ng/nvim "$HOME/.config/nvim"
+ok "Ending..."
 
-action "linking config files"
-cd $dotfile_dir
+action "Linking config files"
+cd "$dotfile_dir"
 for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ $file != "fonts" ]] && [[ $file != "keyd" ]] && [[ $file != "kanata" ]] && [[ $file != ".git" ]]; then
+    if [[ "$file" != "fonts" ]] && [[ "$file" != "keyd" ]] && [[ "$file" != "kanata" ]] && [[ "$file" != ".git" ]]; then
         stow $file
     fi
 done
-ok "ending..."
+ok "Ending..."
 
 action "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-ok "ending..."
+ok "Ending..."
 
 action "Install paru"
 git clone https://aur.archlinux.org/paru.git $HOME/paru
-cd $HOME/paru
+cd "$HOME/paru"
 makepkg -si
-ok "ending..."
+ok "Ending..."
 
 action "Install packages by paru"
-paru
 paru -S fcitx5-skin-fluentdark-git hyprland \
     swaylock-effects-git clipman rofi-lbonn-wayland-git \
     wlogout xdg-desktop-portal-hyprland \
     yazi-git --noconfirm
-ok "ending..."
+ok "Ending..."
 
-action "config mpd"
-touch $cache_dir/log
-touch $cache_dir/database
-touch $config_fir/mpd/pid
-touch $config_fir/mpd/state
-touch $config_fir/mpd/sticker.sql
-mkdir $config_fir/mpd/playlists
-ok "ending..."
+action "Config mpd"
+touch "$cache_dir/log"
+touch "$cache_dir/database"
+touch "$config_fir/mpd/pid"
+touch "$config_fir/mpd/state"
+touch "$config_fir/mpd/sticker.sql"
+mkdir "$config_fir/mpd/playlists"
+ok "Ending..."
 
-action "copy fonts"
-sudo cp $dotfile_dir/fonts/* -r /usr/share/fonts/
+action "Copy fonts"
+sudo cp "$dotfile_dir/fonts/"* -r /usr/share/fonts/
 sudo fc-cache -v
-ok "ending..."
+ok "Ending..."
 
-action "use fish shell"
-chsh -s $(which fish)
-sudo chsh -s $(which fish)
-ok "ending..."
+action "Use fish shell"
+chsh -s "$(which fish)"
+sudo chsh -s "$(which fish)"
+ok "Ending..."
 
-action "start mpd service"
+action "Start mpd service"
 systemctl enable mpd.service --user
 systemctl start mpd.service --user
-ok "ending..."
+ok "Ending..."
 
-action "clone repos"
-cd $HOME
+action "Clone repos"
+cd "$HOME"
 git clone https://github.com/aklk1ng/yt-dlp.git --depth 1
 git clone https://github.com/aklk1ng/scripts.git --depth 1
 git clone https://github.com/aklk1ng/wallpaper.git --depth 1
-ok "ending..."
+ok "Ending..."
 
-action "config keyd"
+action "Config keyd"
 if [[ ! -d /etc/keyd ]]; then
     sudo mkdir /etc/keyd
 fi
-sudo cp $dotfile/keyd/default.conf /etc/keyd/default.conf
+sudo cp "$dotfile/keyd/default.conf" /etc/keyd/default.conf
 sudo systemctl enable keyd.service
 sudo systemctl start keyd.service
-ok "ending..."
+ok "Ending..."
