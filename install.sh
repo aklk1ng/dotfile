@@ -27,9 +27,9 @@ workspace_dir="$HOME/workspace"
 action "Install packages by pacman"
 sudo pacman -S stow git dunst chafa viu unzip unarchiver ninja curl grim zoxide tree-sitter clang \
     tmux keyd qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
-    bat ripgrep fd cmake man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
+    bat ripgrep fd cmake man netcat man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
     python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpv mpc ncmpcpp \
-    network-manager-applet kitty lazygit wl-clipboard mupdf eza glow \
+    network-manager-applet kitty firefox lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     swaybg qt5 --noconfirm
 ok "Ending..."
@@ -76,6 +76,12 @@ action "Install rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ok "Ending..."
 
+action "Config go proxy"
+echo "export GO111MODULE=on" >>~/.profile
+echo "export GOPROXY=https://goproxy.cn" >>~/.profile
+source ~/.profile
+ok "Ending..."
+
 action "Install paru"
 git clone https://aur.archlinux.org/paru.git $HOME/paru
 cd "$HOME/paru"
@@ -90,8 +96,11 @@ paru -S fcitx5-skin-fluentdark-git hyprland \
 ok "Ending..."
 
 action "Config mpd"
-touch "$cache_dir/log"
-touch "$cache_dir/database"
+if [[ ! -d "$cache_dir/mpd" ]]; then
+    mkdir "$cache_dir/mpd" -p
+fi
+touch "$cache_dir/mpd/log"
+touch "$cache_dir/mpd/database"
 touch "$config_fir/mpd/pid"
 touch "$config_fir/mpd/state"
 touch "$config_fir/mpd/sticker.sql"
