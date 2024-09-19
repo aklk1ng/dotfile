@@ -29,7 +29,7 @@ sudo pacman -S stow git dunst chafa viu unzip unarchiver ninja curl grim zoxide 
     tmux keyd qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
     python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpv mpc ncmpcpp \
-    network-manager-applet kitty firefox lazygit wl-clipboard mupdf eza glow \
+    network-manager-applet wireplumber xdg-desktop-portal-hyprland kitty firefox lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     swaybg qt5 --noconfirm
 ok "Ending..."
@@ -82,16 +82,16 @@ echo "export GOPROXY=https://goproxy.cn" >>~/.profile
 source ~/.profile
 ok "Ending..."
 
-action "Install paru"
-git clone https://aur.archlinux.org/paru.git $HOME/paru
-cd "$HOME/paru"
+action "Install yay"
+git clone https://aur.archlinux.org/yay.git $HOME/yay
+cd "$HOME/yay"
 makepkg -si
 ok "Ending..."
 
-action "Install packages by paru"
-paru -S fcitx5-skin-fluentdark-git hyprland \
+action "Install packages by yay"
+yay -S fcitx5-skin-fluentdark-git hyprland \
     swaylock-effects-git clipman rofi-lbonn-wayland-git \
-    wlogout xdg-desktop-portal-hyprland \
+    wlogout \
     yazi-git --noconfirm
 ok "Ending..."
 

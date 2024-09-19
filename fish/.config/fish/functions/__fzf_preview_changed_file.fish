@@ -17,7 +17,7 @@ function __fzf_preview_changed_file --argument-names path_status --description "
 
     if test $index_status = '?'
         __fzf_report_diff_type Untracked
-        _fzf_preview_file $path
+        __fzf_preview_file $path
     else if contains {$index_status}$working_tree_status DD AU UD UA DU AA UU
         # Unmerged statuses taken directly from git status help's short format table
         # Unmerged statuses are mutually exclusive with other statuses, so if we see
