@@ -95,18 +95,6 @@ yay -S fcitx5-skin-fluentdark-git hyprland \
     yazi-git --noconfirm
 ok "Ending..."
 
-action "Config mpd"
-if [[ ! -d "$cache_dir/mpd" ]]; then
-    mkdir "$cache_dir/mpd" -p
-fi
-touch "$cache_dir/mpd/log"
-touch "$cache_dir/mpd/database"
-touch "$config_fir/mpd/pid"
-touch "$config_fir/mpd/state"
-touch "$config_fir/mpd/sticker.sql"
-mkdir "$config_fir/mpd/playlists"
-ok "Ending..."
-
 action "Copy fonts"
 sudo cp "$dotfile_dir/fonts/"* -r /usr/share/fonts/
 sudo fc-cache -v
@@ -117,14 +105,8 @@ chsh -s "$(which fish)"
 sudo chsh -s "$(which fish)"
 ok "Ending..."
 
-action "Start mpd service"
-systemctl enable mpd.service --user
-systemctl start mpd.service --user
-ok "Ending..."
-
 action "Clone repos"
 cd "$HOME"
-git clone https://github.com/aklk1ng/yt-dlp.git --depth 1
 git clone https://github.com/aklk1ng/scripts.git --depth 1
 git clone https://github.com/aklk1ng/wallpaper.git --depth 1
 ok "Ending..."
