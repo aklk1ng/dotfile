@@ -12,6 +12,5 @@ function fish_user_key_bindings
         bind -M $mode \cr fzf-history
         bind -M $mode \cg fzf-git-status
         bind -M $mode \ck fzf-file
-        bind -M $mode \cp fzf-processes
     end
 end
