@@ -25,13 +25,14 @@ cache_dir="$HOME/.cache"
 workspace_dir="$HOME/workspace"
 
 action "Install packages by pacman"
-sudo pacman -S stow git dunst chafa viu unzip unarchiver ninja curl grim zoxide tree-sitter clang \
+sudo pacman -S stow git dunst unzip unarchiver ninja curl grim zoxide tree-sitter clang \
     tmux keyd qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
-    python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpv mpc ncmpcpp \
-    network-manager-applet wireplumber xdg-desktop-portal-hyprland kitty firefox lazygit wl-clipboard mupdf eza glow \
+    python python-requests watchexec slurp cloc swappy fish pamixer brightnessctl gvfs mpd mpv \
+    network-manager-applet pipewire wireplumber xdg-desktop-portal-hyprland kitty firefox lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
-    swaybg qt5 --noconfirm
+    pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth
+swaybg qt5 --noconfirm
 ok "Ending..."
 bat cache --build
 
@@ -103,6 +104,10 @@ ok "Ending..."
 action "Use fish shell"
 chsh -s "$(which fish)"
 sudo chsh -s "$(which fish)"
+ok "Ending..."
+
+action "Enable bluetooth"
+sudo systemctl enable --now bluetooth
 ok "Ending..."
 
 action "Clone repos"
