@@ -1,15 +1,8 @@
 function fish_user_key_bindings
-    fish_vi_key_bindings
-
-    bind -M insert \ca beginning-of-line
-    bind -M insert \ce end-of-line
-    bind -M insert \cn history-search-forward
-    bind -M insert \cp history-search-backward
-
-    for mode in insert default visual
-        bind -M $mode \cf forward-char
-        bind -M $mode \cb backward-char
+    for mode in insert default
+        fish_default_key_bindings -M $mode
     end
+    fish_vi_key_bindings --no-erase
 
     for mode in insert default
         bind -M $mode \co fzf-open

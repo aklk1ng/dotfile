@@ -1,4 +1,3 @@
-abbr --add ls ls --color=auto
 abbr --add la ls -A
 abbr --add ll eza -l --icons
 abbr --add lla ll -A
