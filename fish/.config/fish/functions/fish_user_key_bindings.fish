@@ -8,6 +8,6 @@ function fish_user_key_bindings
         bind -M $mode \co fzf-open
         bind -M $mode \cr fzf-history
         bind -M $mode \cg fzf-git-status
-        bind -M $mode \ck fzf-file
+        bind -M $mode \cx fzf-file
     end
 end
