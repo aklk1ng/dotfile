@@ -36,6 +36,13 @@ swaybg qt5 --noconfirm
 ok "Ending..."
 bat cache --build
 
+action "Install wezterm TERM definition"
+tempfile=$(mktemp) &&
+    curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo &&
+    tic -x -o ~/.terminfo $tempfile &&
+    rm $tempfile
+ok "Ending..."
+
 # git config
 git config --global user.name "aklk1ng"
 git config --global user.email "2628084745@qq.com"

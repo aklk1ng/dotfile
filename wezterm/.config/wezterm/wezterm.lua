@@ -1,11 +1,11 @@
 local wezterm = require('wezterm')
 
 return {
-  enable_wayland = true,
   font = wezterm.font_with_fallback({
     'FiraCode Nerd Font',
     'Noto Sans CJK SC',
   }),
+  term = 'wezterm',
   font_size = 23,
   use_cap_height_to_scale_fallback_fonts = true,
   hide_tab_bar_if_only_one_tab = true,
