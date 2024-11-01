@@ -1,5 +1,4 @@
 abbr --add la ls -A
-abbr --add ll eza -l --icons
 abbr --add lla ll -A
 abbr --add n fastfetch
 abbr --add t tmux new-session -s dev

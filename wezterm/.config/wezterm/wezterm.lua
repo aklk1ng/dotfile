@@ -1,4 +1,5 @@
 local wezterm = require('wezterm')
+local act = wezterm.action
 
 local mod = 'CTRL|SHIFT'
 
@@ -40,9 +41,9 @@ return {
       '#282a36',
       '#a35858',
       '#6c8846',
-      '#93894e',
+      '#91874b',
       '#537e96',
-      '#756ba4',
+      '#76639d',
       '#6096a1',
       '#aaaaaa',
     },
@@ -50,9 +51,9 @@ return {
       '#686868',
       '#a35858',
       '#6c8846',
-      '#93894e',
+      '#91874b',
       '#537e96',
-      '#756ba4',
+      '#76639d',
       '#6096a1',
       '#aaaaaa',
     },
@@ -76,5 +77,9 @@ return {
       mods = mod,
       action = wezterm.action.OpenLinkAtMouseCursor,
     },
+  },
+  keys = {
+    { key = 'PageUp', mods = 'SHIFT', action = act.ScrollByPage(-0.5) },
+    { key = 'PageDown', mods = 'SHIFT', action = act.ScrollByPage(0.5) },
   },
 }
