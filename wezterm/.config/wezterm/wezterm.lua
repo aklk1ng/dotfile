@@ -1,5 +1,7 @@
 local wezterm = require('wezterm')
 
+local mod = 'CTRL|SHIFT'
+
 return {
   font = wezterm.font_with_fallback({
     'FiraCode Nerd Font',
@@ -15,6 +17,8 @@ return {
   underline_position = -7,
   underline_thickness = 2.5,
   line_height = 1.0,
+  -- This option enable open link in tmux.
+  bypass_mouse_reporting_modifiers = mod,
   window_frame = {
     font = wezterm.font({ family = 'FiraCode Nerd Font' }),
     font_size = 20.0,
@@ -64,6 +68,13 @@ return {
         bg_color = '#202325',
         fg_color = '#808080',
       },
+    },
+  },
+  mouse_bindings = {
+    {
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = mod,
+      action = wezterm.action.OpenLinkAtMouseCursor,
     },
   },
 }
