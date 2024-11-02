@@ -5,6 +5,7 @@ source $HOME/.config/fish/env.fish
 
 if status is-interactive
     setproxy
+    set fish_vi_force_cursor 1
     set fish_cursor_default block
     set fish_cursor_insert line
     set fish_cursor_replace_one underscore
