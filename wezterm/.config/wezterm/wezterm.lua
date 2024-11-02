@@ -17,7 +17,6 @@ return {
   command_palette_font_size = 20,
   underline_position = -7,
   underline_thickness = 2.5,
-  line_height = 1.0,
   -- This option enable open link in tmux.
   bypass_mouse_reporting_modifiers = mod,
   window_frame = {
