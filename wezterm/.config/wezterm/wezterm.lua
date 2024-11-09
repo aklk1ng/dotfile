@@ -5,7 +5,8 @@ local mod = 'CTRL|SHIFT'
 
 return {
   font = wezterm.font_with_fallback({
-    'FiraCode Nerd Font',
+    'FiraCode',
+    'Symbols Nerd Font',
     'Noto Sans CJK SC',
   }),
   term = 'wezterm',
@@ -21,12 +22,12 @@ return {
   window_frame = {
     font = wezterm.font({ family = 'FiraCode Nerd Font' }),
     font_size = 20.0,
-    inactive_titlebar_bg = '#202325',
-    active_titlebar_bg = '#202325',
+    inactive_titlebar_bg = '#1d2022',
+    active_titlebar_bg = '#1d2022',
   },
   colors = {
     foreground = '#8b8b8b',
-    background = '#202325',
+    background = '#1d2022',
     cursor_bg = '#808080',
     cursor_fg = '#1a1b21',
     cursor_border = '#707070',
@@ -58,13 +59,13 @@ return {
 
     tab_bar = {
       -- The color of the inactive tab bar edge/divider
-      background = '#202325',
+      background = '#1d2022',
       active_tab = {
-        bg_color = '#202325',
+        bg_color = '#1d2022',
         fg_color = '#aaaaaa',
       },
       inactive_tab = {
-        bg_color = '#202325',
+        bg_color = '#1d2022',
         fg_color = '#808080',
       },
     },
