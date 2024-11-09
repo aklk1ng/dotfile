@@ -1,6 +1,6 @@
 #!/bin/bash
 
-swaybg -i $(find ~/wallpaper/bg/ -name "*.jpg" | shuf -n1) -m fill &
+swaybg -i $(find ~/wallpaper/bg/* | shuf -n1) -m fill &
 
 sleep 1
 cur=$(ps aux | grep swaybg | grep -v grep | awk '{print $2}' | tail -n 1)
