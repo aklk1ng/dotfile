@@ -8,8 +8,8 @@ linemode = "size"
 
 [preview]
 tab_size = 2
-max_width = 1200
-max_height = 1500
+max_width = 1500
+max_height = 1800
 
 [opener]
 folder = [
