@@ -1,10 +1,10 @@
 configuration{
     modi: "drun";
     lines: 12;
-    font: "FiraCode Nerd Font 20";
+    font: "FiraCode 20";
     show-icons: true;
-    icon-theme: "WhiteSur-Dark";
-    terminal: "kitty";
+    icon-theme: "Adwaita";
+    terminal: "wezterm";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
