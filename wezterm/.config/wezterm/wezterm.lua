@@ -6,7 +6,6 @@ local mod = 'CTRL|SHIFT'
 return {
   font = wezterm.font_with_fallback({
     'FiraCode',
-    'Symbols Nerd Font',
     'Noto Sans CJK SC',
   }),
   term = 'wezterm',
