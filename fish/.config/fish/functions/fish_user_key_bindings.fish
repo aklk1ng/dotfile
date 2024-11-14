@@ -5,9 +5,8 @@ function fish_user_key_bindings
     fish_vi_key_bindings --no-erase
 
     for mode in insert default
-        bind -M $mode \co fzf-open
         bind -M $mode \cr fzf-history
         bind -M $mode \cg fzf-git-status
-        bind -M $mode \cx fzf-file
+        bind -M $mode \co fzf-file
     end
 end
