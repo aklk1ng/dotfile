@@ -28,7 +28,7 @@ action "Install packages by pacman"
 sudo pacman -S stow dunst unzip unarchiver ninja curl grim zoxide tree-sitter clang \
     tmux keyd poppler qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
-    python python-requests watchexec slurp cloc rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
+    python python-requests watchexec yazi slurp cloc rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
     network-manager-applet pipewire wireplumber xdg-desktop-portal-hyprland kitty wezterm firefox lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth
@@ -98,7 +98,7 @@ ok "Ending..."
 
 action "Install packages by yay"
 yay -S fcitx5-skin-fluentdark-git hyprland \
-    swaylock-effects-git clipman wlogout yazi-git --noconfirm
+    swaylock-effects-git clipman wlogout --noconfirm
 ok "Ending..."
 
 action "Copy fonts"
