@@ -2,6 +2,7 @@ local wezterm = require('wezterm')
 local act = wezterm.action
 
 local mod = 'CTRL|SHIFT'
+local bg = '#1d1f20'
 
 return {
   font = wezterm.font_with_fallback({
@@ -21,12 +22,12 @@ return {
   window_frame = {
     font = wezterm.font({ family = 'FiraCode Nerd Font' }),
     font_size = 20.0,
-    inactive_titlebar_bg = '#1d2022',
-    active_titlebar_bg = '#1d2022',
+    inactive_titlebar_bg = bg,
+    active_titlebar_bg = bg,
   },
   colors = {
-    foreground = '#8b8b8b',
-    background = '#1d2022',
+    foreground = '#8e8e8e',
+    background = bg,
     cursor_bg = '#808080',
     cursor_fg = '#1a1b21',
     cursor_border = '#707070',
@@ -41,7 +42,7 @@ return {
       '#6c8846',
       '#93894e',
       '#537e96',
-      '#756598',
+      '#76659c',
       '#6096a1',
       '#aaaaaa',
     },
@@ -51,20 +52,20 @@ return {
       '#6c8846',
       '#93894e',
       '#537e96',
-      '#756598',
+      '#76659c',
       '#6096a1',
       '#aaaaaa',
     },
 
     tab_bar = {
       -- The color of the inactive tab bar edge/divider
-      background = '#1d2022',
+      background = bg,
       active_tab = {
-        bg_color = '#1d2022',
+        bg_color = bg,
         fg_color = '#aaaaaa',
       },
       inactive_tab = {
-        bg_color = '#1d2022',
+        bg_color = bg,
         fg_color = '#808080',
       },
     },

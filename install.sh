@@ -25,8 +25,8 @@ cache_dir="$HOME/.cache"
 workspace_dir="$HOME/workspace"
 
 action "Install packages by pacman"
-sudo pacman -S stow git dunst unzip unarchiver ninja curl grim zoxide tree-sitter clang \
-    tmux keyd qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
+sudo pacman -S stow dunst unzip unarchiver ninja curl grim zoxide tree-sitter clang \
+    tmux keyd poppler qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
     python python-requests watchexec slurp cloc rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
     network-manager-applet pipewire wireplumber xdg-desktop-portal-hyprland kitty wezterm firefox lazygit wl-clipboard mupdf eza glow \
@@ -117,7 +117,6 @@ ok "Ending..."
 
 action "Clone repos"
 cd "$HOME"
-git clone https://github.com/aklk1ng/scripts.git --depth 1
 git clone https://github.com/aklk1ng/wallpaper.git --depth 1
 ok "Ending..."
 
