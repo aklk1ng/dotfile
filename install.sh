@@ -25,16 +25,14 @@ cache_dir="$HOME/.cache"
 workspace_dir="$HOME/workspace"
 
 action "Install packages by pacman"
-sudo pacman -S stow dunst unzip unarchiver ninja curl grim zoxide tree-sitter clang \
-    tmux keyd poppler qt5-wayland git-delta qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
-    bat ripgrep fd cmake man netcat man-pages gdb fzf lolcat npm yarn yt-dlp python-pip pyright \
-    python python-requests watchexec yazi slurp cloc rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
+sudo pacman -S stow dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter clang \
+    tmux keyd poppler git-delta qt5 qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
+    bat ripgrep fd cmake man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
+    python python-requests watchexec yazi slurp tokei rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
     network-manager-applet pipewire wireplumber xdg-desktop-portal-hyprland kitty wezterm firefox lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
-    pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth
-swaybg qt5 --noconfirm
+    pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth swaybg --noconfirm
 ok "Ending..."
-bat cache --build
 
 action "Install wezterm TERM definition"
 tempfile=$(mktemp) &&
@@ -78,6 +76,10 @@ for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
         stow $file
     fi
 done
+ok "Ending..."
+
+action "Refresh bat cache"
+bat cache --build
 ok "Ending..."
 
 action "Install rust"
