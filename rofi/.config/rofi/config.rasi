@@ -56,7 +56,6 @@ entry {
     text-color: @fg-col;
     background-color: @bg-col;
     placeholder:"Search";
-
 }
 
 listview {
