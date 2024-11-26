@@ -99,8 +99,7 @@ makepkg -si
 ok "Ending..."
 
 action "Install packages by yay"
-yay -S fcitx5-skin-fluentdark-git hyprland \
-    swaylock-effects-git clipman wlogout --noconfirm
+yay -S hyprland swaylock-effects-git clipman wlogout --noconfirm
 ok "Ending..."
 
 action "Copy fonts"
