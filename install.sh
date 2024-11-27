@@ -25,7 +25,7 @@ cache_dir="$HOME/.cache"
 workspace_dir="$HOME/workspace"
 
 action "Install packages by pacman"
-sudo pacman -S stow dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter clang \
+sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter clang \
     tmux keyd poppler git-delta qt5 qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
     python python-requests watchexec yazi slurp tokei rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
@@ -71,8 +71,8 @@ ok "Ending..."
 
 action "Linking config files"
 cd "$dotfile_dir"
-for file in $(find . -maxdepth 1 -type d -printf '%P\n'); do
-    if [[ "$file" != "fonts" ]] && [[ "$file" != "keyd" ]] && [[ "$file" != "kanata" ]] && [[ "$file" != ".git" ]]; then
+for file in $(find . -maxdepth 1 -type d -not -name '.*' -printf '%P\n'); do
+    if [[ "$file" != "fonts" ]] && [[ "$file" != "keyd" ]] && [[ "$file" != "kanata" ]]; then
         stow $file
     fi
 done
