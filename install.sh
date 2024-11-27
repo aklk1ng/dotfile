@@ -28,7 +28,8 @@ action "Install packages by pacman"
 sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter clang \
     tmux keyd poppler git-delta qt5 qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
-    python python-requests watchexec yazi slurp tokei rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
+    python python-requests ttf-fira-code ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono watchexec \
+    yazi slurp tokei rofi-wayland swappy fish pamixer brightnessctl gvfs mpv \
     network-manager-applet pipewire wireplumber xdg-desktop-portal-hyprland kitty wezterm firefox lazygit wl-clipboard mupdf eza glow \
     fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth swaybg --noconfirm
@@ -72,7 +73,7 @@ ok "Ending..."
 action "Linking config files"
 cd "$dotfile_dir"
 for file in $(find . -maxdepth 1 -type d -not -name '.*' -printf '%P\n'); do
-    if [[ "$file" != "fonts" ]] && [[ "$file" != "keyd" ]] && [[ "$file" != "kanata" ]]; then
+    if [[ "$file" != "keyd" ]] && [[ "$file" != "kanata" ]]; then
         stow $file
     fi
 done
@@ -100,11 +101,6 @@ ok "Ending..."
 
 action "Install packages by yay"
 yay -S hyprland swaylock-effects-git clipman wlogout --noconfirm
-ok "Ending..."
-
-action "Copy fonts"
-sudo cp "$dotfile_dir/fonts/"* -r /usr/share/fonts/
-sudo fc-cache -v
 ok "Ending..."
 
 action "Use fish shell"
