@@ -28,7 +28,6 @@
   },
   "custom/icon": {
     "format": " ",
-    "on-click": "$HOME/.config/waybar/scripts/bg.sh",
     "tooltip": false,
   },
   "hyprland/workspaces": {
