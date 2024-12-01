@@ -100,7 +100,7 @@ makepkg -si
 ok "Ending..."
 
 action "Install packages by yay"
-yay -S clipman wlogout --noconfirm
+yay -S clipman slides wlogout --noconfirm
 ok "Ending..."
 
 action "Use fish shell"
