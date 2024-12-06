@@ -26,7 +26,7 @@ return {
     active_titlebar_bg = bg,
   },
   colors = {
-    foreground = '#8e8e8e',
+    foreground = '#8d8d8d',
     background = bg,
     cursor_bg = '#808080',
     cursor_fg = '#1a1b21',

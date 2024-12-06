@@ -2,7 +2,7 @@
 
 prev_hook() {
     killall -q clash
-    cd $HOME/clash || return
+    cd $XDG_DATA_HOME/clash || return
 }
 
 main() {
