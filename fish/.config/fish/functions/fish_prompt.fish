@@ -1,18 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
-    set -l last_pipestatus $pipestatus
-    set -lx __fish_last_status $status # Export for __fish_print_pipestatus.
-    set -l normal (set_color normal)
-    set -q fish_color_status
-    or set -g fish_color_status red
-    # Write pipestatus
-    # If the status was carried over (if no command is issued or if `set` leaves the status untouched), don't bold it.
-    set -q __fish_prompt_status_generation; or set -g __fish_prompt_status_generation $status_generation
-    set __fish_prompt_status_generation $status_generation
-    set -l status_color (set_color $fish_color_status)
-    set -l statusb_color (set_color $bold_flag $fish_color_status)
-    set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
-
-    echo -n (prompt_pwd)
+    set -l __last_command_exit_status $status
 
     set -q __fish_git_prompt_showdirtystate
     or set -g __fish_git_prompt_showdirtystate 1
@@ -42,11 +29,16 @@ function fish_prompt --description 'Write out the prompt'
     or set -g __fish_git_prompt_color_branch green
     set -q __fish_git_prompt_char_stateseparator
     or set -g __fish_git_prompt_char_stateseparator ''
-    fish_vcs_prompt '|%s'
-    echo -n " "$prompt_status
-    echo
 
-    set_color cyan
-    echo -n '$ '
-    set_color normal
+
+    set -l pwd (prompt_pwd)
+    set -l vcs (fish_vcs_prompt '%s')
+    set -l status_color (set_color -o cyan)
+    if test $__last_command_exit_status != 0
+        set status_color (set_color -o red)
+    end
+    set -l dollar "\n$status_color\$ "
+
+    echo -n -e $pwd $vcs $dollar
+
 end
