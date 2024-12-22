@@ -34,10 +34,11 @@ function fish_prompt --description 'Write out the prompt'
     set -l pwd (prompt_pwd)
     set -l vcs (fish_vcs_prompt '%s')
     set -l status_color (set_color -o cyan)
+    set -l normal_color (set_color -o normal)
     if test $__last_command_exit_status != 0
         set status_color (set_color -o red)
     end
-    set -l dollar "\n$status_color\$ "
+    set -l dollar "\n$status_color\$ $normal_color"
 
     echo -n -e $pwd $vcs $dollar
 
