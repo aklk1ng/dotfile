@@ -20,7 +20,7 @@ return {
   -- This option enable open link in tmux.
   bypass_mouse_reporting_modifiers = mod,
   window_frame = {
-    font = wezterm.font({ family = 'FiraCode Nerd Font' }),
+    font = wezterm.font({ family = 'FiraCode' }),
     font_size = 20.0,
     inactive_titlebar_bg = bg,
     active_titlebar_bg = bg,
