@@ -29,7 +29,7 @@ sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide
     tmux keyd poppler git-delta qt5 qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
     python python-requests ttf-fira-code ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono watchexec \
-    ueberzugpp yazi slurp tokei rofi-wayland swappy fish pamixer brightnessctl gvfs mpv network-manager-applet \
+    ueberzugpp yazi slurp tokei rofi-wayland swappy downgrade fish pamixer brightnessctl gvfs mpv network-manager-applet \
     pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpaper hyprlock kitty wezterm firefox lazygit \
     wl-clipboard mupdf eza glow fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth --noconfirm
