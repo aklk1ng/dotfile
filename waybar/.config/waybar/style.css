@@ -1,5 +1,4 @@
 * {
-  border: none;
   border-radius: 10px;
   font-family: "FiraCode";
   font-size: 21px;
@@ -9,10 +8,6 @@
 window#waybar {
   margin-top: 5px;
   background-color: rgba(44, 44, 44, 0);
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
 }
 
 tooltip {
@@ -37,7 +32,6 @@ tooltip {
 
 window > box {
   margin-top: 5px;
-  background-color: rgba(50, 50, 50, 0.6);
 }
 
 #custom-icon,
@@ -49,28 +43,13 @@ window > box {
 #tray,
 #backlight {
   padding: 0px 10px;
+  color: #d3d3d3;
 }
 
 #custom-icon {
   color: #00bfff;
 }
 
-#cpu {
-  color: #cac96f;
-}
-
 #tray {
   background-color: #999999;
-}
-
-#clock {
-  color: #fab39f;
-}
-
-#pulseaudio {
-  color: #89b4ff;
-}
-
-#battery {
-  color: #a6e7af;
 }
