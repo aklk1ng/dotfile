@@ -17,6 +17,10 @@ ENV_VARS=(
 for var in "${ENV_VARS[@]}"; do
     echo "$var" | sudo tee -a /etc/environment
 done
+if [ $? -ne 0 ]; then
+    echo 'Your account will be locked!!!'
+    exit 1
+fi
 ok "Ending..."
 
 dotfile_dir="$HOME/dotfile"
