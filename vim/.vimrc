@@ -66,7 +66,9 @@ nmap <C-x>] <cmd>new | resize -10 | term<cr>
 
 nmap <Esc> <cmd>nohlsearch<cr>
 
-nmap <A-/> <cmd>let cur_col = col('.')<cr>yyp:call cursor('.', cur_col)<CR>
+imap <C-l> <cmd>normal! zz<cr>
+
+nmap <A-/> <cmd>let cur_col = col('.')<cr>yyp:call cursor('.', cur_col)<cr>
 
 nmap j gj
 nmap k gk
