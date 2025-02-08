@@ -12,7 +12,4 @@ prepend_keymap = [
   { on = [
     "<C-g>",
   ], run = "shell lazygit --block --confirm" },
-  { on = [
-    "?",
-  ], run = "help", desc = "Open help" },
 ]
