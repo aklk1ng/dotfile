@@ -4,7 +4,6 @@ set g:maplocalleader ' '
 set splitright
 set splitbelow
 set noshowmode
-set noruler
 set expandtab
 set cursorline
 set breakindent
