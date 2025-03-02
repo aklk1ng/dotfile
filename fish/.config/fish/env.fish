@@ -15,4 +15,4 @@ set -gx GOPROXY https://goproxy.cn
 
 set -gx MANPAGER "nvim +Man!"
 
-set -gx FZF_DEFAULT_OPTS "--color 16 --reverse --border=none --preview 'bat --color=always {}' --bind ctrl-y:select-all+accept,ctrl-u:half-page-up,ctrl-d:half-page-down,ctrl-v:preview-half-page-down,alt-v:preview-half-page-up,ctrl-k:first,ctrl-j:last -m"
+set -gx FZF_DEFAULT_OPTS "--color 16 --reverse --border=none --preview 'bat --color=always {}' --bind ctrl-y:toggle-all,ctrl-u:half-page-up,ctrl-d:half-page-down,ctrl-v:preview-half-page-down,alt-v:preview-half-page-up,ctrl-k:first,ctrl-j:last -m"
