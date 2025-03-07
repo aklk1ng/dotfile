@@ -104,7 +104,7 @@ makepkg -si
 ok "Ending..."
 
 action "Install packages by yay"
-yay -S clipman slides wlogout --noconfirm
+yay -S clipman slides wlogout mihomo-party-xs-bin --noconfirm
 ok "Ending..."
 
 action "Use fish shell"

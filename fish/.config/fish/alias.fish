@@ -4,7 +4,7 @@ abbr --add n fastfetch
 abbr --add t tmux new-session -s dev
 abbr --add ki nvim ~/.config/kitty/kitty.conf
 abbr --add py python3
-abbr --add readme nvim README.md
+abbr --add rd nvim README.md
 abbr --add lg lazygit
 abbr --add j yazi
 
@@ -31,15 +31,15 @@ abbr --add g git
 abbr --add ga git add
 abbr --add gb git branch
 abbr --add gt git tag
-abbr --add gc git checkout
-abbr --add gbm git branch -M
 abbr --add gs git status
-abbr --add gcm git commit -m
-abbr --add gcam git commit --amend -m
+abbr --add gc git commit
+abbr --add --position anywhere -- am --amend
 abbr --add gp git pull
-abbr --add gpo git push origin
 abbr --add gd git diff
 abbr --add gf git fetch
+abbr --add --command git c checkout
+abbr --add --command git co commit
+abbr --add --command git p push
 
 abbr --add yayr "yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
 
