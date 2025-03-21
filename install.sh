@@ -77,7 +77,7 @@ ok "Ending..."
 action "Linking config files"
 cd "$dotfile_dir"
 for file in $(find . -maxdepth 1 -type d -not -name '.*' -printf '%P\n'); do
-    if [[ "$file" != "keyd" ]] && [[ "$file" != "kanata" ]]; then
+    if [[ "$file" != "keyd" ]]; then
         stow $file
     fi
 done
@@ -104,7 +104,7 @@ makepkg -si
 ok "Ending..."
 
 action "Install packages by yay"
-yay -S clipman slides wlogout mihomo-party-xs-bin --noconfirm
+yay -S clipman wlogout mihomo-party-xs-bin --noconfirm
 ok "Ending..."
 
 action "Use fish shell"

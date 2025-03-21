@@ -1,8 +1,9 @@
 function fish_user_key_bindings
-    for mode in insert default
-        fish_default_key_bindings -M $mode
-    end
-    fish_vi_key_bindings --no-erase
+    fish_hybrid_key_bindings
+
+    # Fuck ^_^
+    # fish_vi_key_bindings.fish: bind -s --preset -M insert ctrl-n accept-autosuggestion
+    bind -s --preset -M insert ctrl-n down-or-search
 
     for mode in insert default
         bind -M $mode \cr fzf-history
