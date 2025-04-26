@@ -34,16 +34,9 @@ sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide
     bat ripgrep fd cmake ccache man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
     python python-requests ttf-fira-code ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono watchexec \
     ueberzugpp yazi slurp tokei rofi-wayland swappy downgrade fish pamixer brightnessctl gvfs mpv network-manager-applet \
-    pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpaper hyprlock kitty wezterm firefox lazygit \
+    pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpaper hyprlock kitty firefox lazygit \
     wl-clipboard mupdf eza glow fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth --noconfirm
-ok "Ending..."
-
-action "Install wezterm TERM definition"
-tempfile=$(mktemp) &&
-    curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo &&
-    tic -x -o ~/.terminfo $tempfile &&
-    rm $tempfile
 ok "Ending..."
 
 # git config

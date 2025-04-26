@@ -93,8 +93,8 @@ cmap <C-b> <Left>
 cmap <C-a> <Home>
 cmap <C-e> <End>
 
-cmap %c <C-R>=expand('%:p:~:h')<cr>
-cmap %p <C-R>=expand('%:p:~')<cr>
+cmap %c expand('%:p:~:h')<cr>
+cmap %p expand('%:p:~')<cr>
 
 tmap <A-Esc> <C-\><C-n>
 tmap <A-h> <C-\><C-n><C-w>h
