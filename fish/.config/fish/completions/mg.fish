@@ -9,6 +9,10 @@ function __list_plugins
     end
 end
 
+complete -c mg -f -n __fish_use_subcommand -a 'install update remove sync log'
+complete -c ./mg -f -n __fish_use_subcommand -a 'install update remove sync log'
+complete -c ../mg -f -n __fish_use_subcommand -a 'install update remove sync log'
+
 complete -c mg -f -n '__fish_seen_subcommand_from sync' -a '(__list_plugins)'
 complete -c ./mg -f -n '__fish_seen_subcommand_from sync' -a '(__list_plugins)'
 
