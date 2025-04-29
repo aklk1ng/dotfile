@@ -44,6 +44,10 @@ git config --global user.name "aklk1ng"
 git config --global user.email "2628084745@qq.com"
 git config --global core.editor "nvim"
 git config --global core.ui true
+git config --global core.pager delta
+git config --global delta.syntax-theme zenburn
+git config --global delta.line-numbers true
+git config --global delta.dark true
 git config --global http.postBuffer 5242880
 git config --global https.postBuffer 5242880
 git config --global init.defaultBranch 'main'
