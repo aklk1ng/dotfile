@@ -39,7 +39,7 @@ sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide
     pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth --noconfirm
 ok "Ending..."
 
-# git config
+action "Config git"
 git config --global user.name "aklk1ng"
 git config --global user.email "2628084745@qq.com"
 git config --global core.editor "nvim"
@@ -51,6 +51,7 @@ git config --global delta.dark true
 git config --global http.postBuffer 5242880
 git config --global https.postBuffer 5242880
 git config --global init.defaultBranch 'main'
+ok "Ending..."
 
 action "Create neccessary directory"
 if [[ ! -d "$dotfile_dir" ]]; then
