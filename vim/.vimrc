@@ -5,7 +5,6 @@ set splitright
 set splitbelow
 set noshowmode
 set expandtab
-set cursorline
 set breakindent
 set scrolloff=5
 set copyindent
@@ -56,16 +55,11 @@ nmap <A-]> <C-w>>
 nmap <A-,> <C-w>-
 nmap <A-.> <C-w>+
 nmap <A--> <cmd>resize | vertical resize<cr>
-nmap <leader>tn <cmd>tabnew<cr>
-nmap <leader>ts <cmd>tab split<cr>
-nmap <leader>tc <cmd>silent! tabclose<cr>
 
 nmap <C-x>[ <cmd>vnew | vertical resize -20 | term<cr>
 nmap <C-x>] <cmd>new | resize -10 | term<cr>
 
 nmap <Esc> <cmd>nohlsearch<cr>
-
-imap <C-l> <cmd>normal! zz<cr>
 
 nmap <A-/> <cmd>let cur_col = col('.')<cr>yyp:call cursor('.', cur_col)<cr>
 
