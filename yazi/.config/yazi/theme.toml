@@ -13,7 +13,7 @@ use = ""
 
 # : Manager {{{
 
-[manager]
+[mgr]
 
 # Border
 border_symbol = " "
