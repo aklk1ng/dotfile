@@ -29,7 +29,7 @@ cache_dir="$HOME/.cache"
 workspace_dir="$HOME/workspace"
 
 action "Install packages by pacman"
-sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter clang \
+sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter-cli clang \
     tmux keyd poppler git-delta qt5 qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
     bat ripgrep fd cmake ccache man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
     python python-requests ttf-fira-code ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono watchexec \

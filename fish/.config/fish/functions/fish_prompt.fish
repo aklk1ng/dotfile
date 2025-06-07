@@ -1,5 +1,5 @@
-function fish_prompt --description 'Write out the prompt'
-    set -l __last_command_exit_status $status
+function fish_prompt
+    set -l last_status $status
 
     set -q __fish_git_prompt_showdirtystate
     or set -g __fish_git_prompt_showdirtystate 1
@@ -30,12 +30,11 @@ function fish_prompt --description 'Write out the prompt'
     set -q __fish_git_prompt_char_stateseparator
     or set -g __fish_git_prompt_char_stateseparator ''
 
-
     set -l pwd (prompt_pwd)
     set -l vcs (fish_vcs_prompt '%s')
     set -l status_color (set_color -o cyan)
     set -l normal_color (set_color -o normal)
-    if test $__last_command_exit_status != 0
+    if not test $last_status -eq 0
         set status_color (set_color -o red)
     end
     set -l dollar "\n$status_color\$ $normal_color"
