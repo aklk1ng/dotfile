@@ -31,10 +31,10 @@ workspace_dir="$HOME/workspace"
 action "Install packages by pacman"
 sudo pacman -S stow github-cli dunst zip unzip unarchiver ninja curl grim zoxide tree-sitter-cli clang \
     tmux keyd poppler git-delta qt5 qt6-wayland waybar fastfetch lua lua-language-server bash-language-server \
-    bat ripgrep fd cmake ccache man netcat man-pages gdb fzf gopls npm yt-dlp python-pip pyright \
-    python python-requests ttf-fira-code ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono watchexec \
+    bat ripgrep fd cmake ccache man netcat man-pages gdb fzf gopls npm yt-dlp \
+    python python-pip python-requests ttf-fira-code ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono watchexec \
     ueberzugpp yazi slurp tokei rofi-wayland swappy downgrade fish pamixer brightnessctl gvfs mpv network-manager-applet \
-    pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpaper hyprlock kitty firefox lazygit \
+    pipewire wireplumber xdg-desktop-portal-hyprland hyprland hyprpaper hyprlock kitty lazygit \
     wl-clipboard mupdf eza visidata glow fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime fcitx5-pinyin-zhwiki \
     pulseaudio pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth --noconfirm
 ok "Ending..."
@@ -102,7 +102,7 @@ makepkg -si
 ok "Ending..."
 
 action "Install packages by yay"
-yay -S clipman wlogout mihomo-party-xs-bin --noconfirm
+yay -S clipman wlogout basedpyright mihomo-party-xs-bin zen-browser-bin --noconfirm
 ok "Ending..."
 
 action "Use fish shell"
