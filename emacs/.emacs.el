@@ -89,15 +89,15 @@
 
 (global-set-key (kbd "C-x C-g") 'find-file-at-point)
 
-(global-set-key (kbd "C-c h")  'windmove-left)
+(global-set-key (kbd "C-c h") 'windmove-left)
 (global-set-key (kbd "C-c l") 'windmove-right)
 (global-set-key (kbd "C-c k") 'windmove-up)
 (global-set-key (kbd "C-c j") 'windmove-down)
 
 (global-set-key (kbd "M--") 'undo-redo)
 
-(add-hook 'before-save-hook #'delete-trailing-whitespace)
-(add-hook 'python-mode-hook #'flymake-mode)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'python-mode-hook 'flymake-mode)
 (setq python-flymake-command '("ruff" "check" "--quiet" "--stdin-filename=stdin" "-"))
 
 (use-package flymake
